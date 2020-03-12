@@ -1,0 +1,32 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 8, Failures: 7, Errors: 0, Skipped: 0, Time elapsed: 18.867 s <<< FAILURE! - in TestSuite
+com.htcindia.trracs.testcases.BOEExtensionTest.T005_uploadBOEFile  Time elapsed: 2.692 s  <<< FAILURE!
+java.lang.NullPointerException
+	at com.htcindia.trracs.testcases.BOEExtensionTest.T005_uploadBOEFile(BOEExtensionTest.java:77)
+
+com.htcindia.trracs.testcases.BOEExtensionTest.T007_ViewBOE  Time elapsed: 3.85 s  <<< FAILURE!
+java.lang.NullPointerException
+	at com.htcindia.trracs.testcases.BOEExtensionTest.T007_ViewBOE(BOEExtensionTest.java:108)
+
+com.htcindia.trracs.testcases.BOEExtensionTest.T004_checkAdCodeAutoDisable  Time elapsed: 4.087 s  <<< FAILURE!
+java.lang.AssertionError: null
+	at com.htcindia.trracs.testcases.BOEExtensionTest.T004_checkAdCodeAutoDisable(BOEExtensionTest.java:64)
+
+com.htcindia.trracs.testcases.BOEExtensionTest.T003_searchByBOEnumber  Time elapsed: 4.169 s  <<< FAILURE!
+java.lang.NullPointerException
+	at com.htcindia.trracs.testcases.BOEExtensionTest.T003_searchByBOEnumber(BOEExtensionTest.java:53)
+
+com.htcindia.trracs.testcases.BOEExtensionTest.T006_DownloadCSVFile  Time elapsed: 4.707 s  <<< FAILURE!
+java.lang.AssertionError: null
+	at com.htcindia.trracs.testcases.BOEExtensionTest.T006_DownloadCSVFile(BOEExtensionTest.java:90)
+
+com.htcindia.trracs.testcases.BOEExtensionTest.T008_RaiseBOEExtension  Time elapsed: 0.861 s  <<< FAILURE!
+java.lang.AssertionError: null
+	at com.htcindia.trracs.testcases.BOEExtensionTest.T008_RaiseBOEExtension(BOEExtensionTest.java:124)
+
+com.htcindia.trracs.testcases.BOEExtensionTest.T009_cancelBOEExtension  Time elapsed: 1.464 s  <<< FAILURE!
+java.lang.AssertionError: null
+	at com.htcindia.trracs.testcases.BOEExtensionTest.T009_cancelBOEExtension(BOEExtensionTest.java:142)
+

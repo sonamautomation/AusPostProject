@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [TRRACS]">
+  <listeners>
+    <listener class-name="com.htcindia.trracs.listener.MyListener"/>
+  </listeners>
+  <test thread-count="5" verbose="0" name="Import Module(failed)" parallel="methods">
+    <classes>
+      <class name="com.htcindia.trracs.testcases.BOEExtensionTest">
+        <methods>
+          <include name="T006_DownloadCSVFile"/>
+          <include name="closedriver"/>
+          <include name="beforTestSuite"/>
+          <include name="T007_ViewBOE"/>
+          <include name="T003_searchByBOEnumber"/>
+          <include name="T005_uploadBOEFile"/>
+          <include name="T004_checkAdCodeAutoDisable"/>
+          <include name="T001_openBOEExtension"/>
+          <include name="T008_RaiseBOEExtension"/>
+          <include name="T009_cancelBOEExtension"/>
+        </methods>
+      </class> <!-- com.htcindia.trracs.testcases.BOEExtensionTest -->
+    </classes>
+  </test> <!-- Import Module(failed) -->
+</suite> <!-- Failed suite [TRRACS] -->

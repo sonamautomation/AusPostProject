@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="29996" started-at="2020-02-19T09:34:10Z" finished-at="2020-02-19T09:34:40Z">
+    <groups>
+    </groups>
+    <test name="BOEClosureTest" duration-ms="29996" started-at="2020-02-19T09:34:10Z" finished-at="2020-02-19T09:34:40Z">
+      <class name="com.htcindia.trracs.testcases.BOEClosureTest">
+        <test-method status="PASS" signature="T001_openBOEClosure(java.util.Map, java.lang.reflect.Method)[pri:0, instance:com.htcindia.trracs.testcases.BOEClosureTest@5442a311]" name="T001_openBOEClosure" duration-ms="12997" started-at="2020-02-19T15:04:27Z" data-provider="BOEClosureTestData" finished-at="2020-02-19T15:04:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{password=123Welcome*, type=import, username=test_bob5}]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void com.htcindia.trracs.testcases.BOEClosureTest.T001_openBOEClosure(java.util.Map,java.lang.reflect.Method)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- T001_openBOEClosure -->
+      </class> <!-- com.htcindia.trracs.testcases.BOEClosureTest -->
+    </test> <!-- BOEClosureTest -->
+  </suite> <!-- Suite -->
+</testng-results>

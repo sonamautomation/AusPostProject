@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" parallel="tests">
+  <listeners>
+    <listener class-name="com.htcindia.trracs.listener.CustomListener"/>
+  </listeners>
+  <test name="BOEClosureTest(failed)" parallel="tests">
+    <classes>
+      <class name="com.htcindia.trracs.testcases.BOEClosureTest">
+        <methods>
+          <include name="T008_RaiseBOEClosure" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.htcindia.trracs.testcases.BOEClosureTest -->
+    </classes>
+  </test> <!-- BOEClosureTest(failed) -->
+  <test name="BOEExtensionTest(failed)" parallel="tests">
+    <classes>
+      <class name="com.htcindia.trracs.testcases.BOEExtensionTest">
+        <methods>
+          <include name="T009_cancelBOEExtension" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.htcindia.trracs.testcases.BOEExtensionTest -->
+    </classes>
+  </test> <!-- BOEExtensionTest(failed) -->
+</suite> <!-- Failed suite [Suite] -->

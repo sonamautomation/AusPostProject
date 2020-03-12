@@ -1,0 +1,791 @@
+11:41:29.936 INFO  TRRACS -Suite : Test Suite Begins
+11:41:29.972 INFO  TRRACS -Gathering Configuration Properties...
+11:41:29.976 INFO  TRRACS -Successfully Gathered Configuration Properties...
+11:41:29.980 INFO  TRRACS -Suite : Test Suite Begins
+11:41:29.980 INFO  TRRACS -Gathering Configuration Properties...
+11:41:29.980 INFO  TRRACS -Successfully Gathered Configuration Properties...
+11:41:30.069 INFO  TRRACS -BOEClosureTest : Test Begins
+11:41:30.069 INFO  TRRACS -Initialization Of Driver Factory Begins...
+11:41:30.070 INFO  TRRACS -BOEExtensionTest : Test Begins
+11:41:30.071 INFO  TRRACS -Initialization Of Driver Factory Begins...
+11:41:30.072 INFO  TRRACS -ORM Master : Test Begins
+11:41:30.072 INFO  TRRACS -Initialization Of Driver Factory Begins...
+11:41:32.471 INFO  TRRACS -Thread Safe WebDriver Instance is Set...
+11:41:32.607 INFO  TRRACS -Thread Safe WebDriver Instance is Set...
+11:41:32.710 INFO  TRRACS -Successfully Launched Local:Chrome
+11:41:32.792 INFO  TRRACS -Thread Safe WebDriver Instance is Set...
+11:41:32.806 INFO  TRRACS -Successfully Launched Local:Chrome
+11:41:32.913 INFO  TRRACS -Successfully Launched Local:Chrome
+11:41:49.459 INFO  TRRACS -TC01_navigateToOrmMaster : Test Case Skipped
+11:41:49.467 INFO  TRRACS -T001_openBOEExtension : Test Case Skipped
+11:41:49.539 INFO  TRRACS -ORM Master : Test Ends
+11:41:50.638 INFO  TRRACS -BOEExtensionTest : Test Ends
+11:41:51.865 INFO  TRRACS -T001_openBOEClosure : Test Case Failed
+11:41:52.712 INFO  TRRACS -T002_checkAutofillToDate : Test Case Passed
+11:41:52.715 INFO  TRRACS -T002_checkAutofillToDate : Test Case Passed
+11:41:52.763 INFO  TRRACS -T003_searchByBOEnumber : Test Case Failed
+11:41:53.607 INFO  TRRACS -T004_checkAdCodeAutoDisable : Test Case Failed
+11:41:54.438 INFO  TRRACS -T005_uploadBOEFile : Test Case Failed
+11:41:55.233 INFO  TRRACS -T006_DownloadCSVFile : Test Case Failed
+11:41:56.044 INFO  TRRACS -T007_ViewBOE : Test Case Failed
+11:41:56.830 INFO  TRRACS -T008_RaiseBOEClosure : Test Case Failed
+11:41:57.611 INFO  TRRACS -BOEClosureTest : Test Ends
+11:41:58.388 INFO  TRRACS -Suite : Test suite Ends
+11:43:25.260 INFO  TRRACS -Suite : Test Suite Begins
+11:43:25.264 INFO  TRRACS -Gathering Configuration Properties...
+11:43:25.266 INFO  TRRACS -Successfully Gathered Configuration Properties...
+11:43:25.270 INFO  TRRACS -Suite : Test Suite Begins
+11:43:25.270 INFO  TRRACS -Gathering Configuration Properties...
+11:43:25.270 INFO  TRRACS -Successfully Gathered Configuration Properties...
+11:43:25.340 INFO  TRRACS -ORM Master : Test Begins
+11:43:25.340 INFO  TRRACS -Initialization Of Driver Factory Begins...
+11:43:25.340 INFO  TRRACS -BOEExtensionTest : Test Begins
+11:43:25.341 INFO  TRRACS -Initialization Of Driver Factory Begins...
+11:43:25.341 INFO  TRRACS -BOEClosureTest : Test Begins
+11:43:25.342 INFO  TRRACS -Initialization Of Driver Factory Begins...
+11:43:27.379 INFO  TRRACS -Thread Safe WebDriver Instance is Set...
+11:43:27.473 INFO  TRRACS -Thread Safe WebDriver Instance is Set...
+11:43:27.623 INFO  TRRACS -Successfully Launched Local:Chrome
+11:43:27.670 INFO  TRRACS -Successfully Launched Local:Chrome
+11:43:27.761 INFO  TRRACS -Thread Safe WebDriver Instance is Set...
+11:43:27.884 INFO  TRRACS -Successfully Launched Local:Chrome
+11:43:39.779 INFO  TRRACS -TC01_navigateToOrmMaster : Test Case Execution Begins
+11:43:39.779 INFO  TRRACS -Initialization Of Driver Factory Begins...
+11:43:40.861 INFO  TRRACS -Thread Safe WebDriver Instance is Set...
+11:43:40.982 INFO  TRRACS -Successfully Launched Local:Chrome
+11:43:42.385 INFO  TRRACS -T001_openBOEExtension : Test Case Failed
+11:43:43.241 INFO  TRRACS -T002_checkAutofillToDate : Test Case Passed
+11:43:43.243 INFO  TRRACS -T002_checkAutofillToDate : Test Case Passed
+11:43:43.282 INFO  TRRACS -T003_searchByBOEnumber : Test Case Failed
+11:43:44.118 INFO  TRRACS -T004_checkAdCodeAutoDisable : Test Case Failed
+11:43:45.007 INFO  TRRACS -T005_uploadBOEFile : Test Case Failed
+11:43:45.864 INFO  TRRACS -T006_DownloadCSVFile : Test Case Failed
+11:43:46.698 INFO  TRRACS -T007_ViewBOE : Test Case Failed
+11:43:47.560 INFO  TRRACS -T008_RaiseBOEExtension : Test Case Failed
+11:43:47.734 INFO  TRRACS -T001_openBOEClosure : Test Case Passed
+11:43:47.905 INFO  TRRACS -TC01_navigateToOrmMaster : Test Case Passed
+11:43:48.399 INFO  TRRACS -T009_cancelBOEExtension : Test Case Failed
+11:43:48.518 INFO  TRRACS -TC01_navigateToOrmMaster : Test Case Passed
+11:43:48.519 INFO  TRRACS -TC01_navigateToOrmMaster : Test Case Failed
+11:43:48.522 INFO  TRRACS -TC01_navigateToOrmMaster : Test Case Failed
+11:43:48.559 INFO  TRRACS -TC02_checkPresenceofElements : Test Case Execution Begins
+11:43:48.559 INFO  TRRACS -Initialization Of Driver Factory Begins...
+11:43:49.160 INFO  TRRACS -BOEExtensionTest : Test Ends
+11:43:51.742 INFO  TRRACS -Thread Safe WebDriver Instance is Set...
+11:43:51.878 INFO  TRRACS -Successfully Launched Local:Chrome
+11:43:51.879 INFO  TRRACS -TC02_checkPresenceofElements : Test Case Failed
+11:43:52.495 INFO  TRRACS -TC02_checkPresenceofElements : Test Case Failed
+11:43:52.497 INFO  TRRACS -TC02_checkPresenceofElements : Test Case Ends
+11:43:52.546 INFO  TRRACS -TC03_selectDate : Test Case Execution Begins
+11:43:52.546 INFO  TRRACS -Initialization Of Driver Factory Begins...
+11:43:53.693 INFO  TRRACS -Thread Safe WebDriver Instance is Set...
+11:43:53.810 INFO  TRRACS -Successfully Launched Local:Chrome
+11:43:53.811 INFO  TRRACS -TC03_selectDate : Test Case Skipped
+11:43:54.497 INFO  TRRACS -TC03_selectDate : Test Case Skipped
+11:43:54.538 INFO  TRRACS -TC04_ormReferenceNumberField : Test Case Execution Begins
+11:43:54.539 INFO  TRRACS -Initialization Of Driver Factory Begins...
+11:43:55.680 INFO  TRRACS -Thread Safe WebDriver Instance is Set...
+11:43:55.802 INFO  TRRACS -Successfully Launched Local:Chrome
+11:43:55.804 INFO  TRRACS -TC04_ormReferenceNumberField : Test Case Skipped
+11:43:56.545 INFO  TRRACS -TC04_ormReferenceNumberField : Test Case Skipped
+11:43:56.584 INFO  TRRACS -TC05_adCodeField : Test Case Execution Begins
+11:43:56.585 INFO  TRRACS -Initialization Of Driver Factory Begins...
+11:43:57.710 INFO  TRRACS -Thread Safe WebDriver Instance is Set...
+11:43:57.824 INFO  TRRACS -Successfully Launched Local:Chrome
+11:43:57.825 INFO  TRRACS -TC05_adCodeField : Test Case Skipped
+11:43:58.048 INFO  TRRACS -T002_checkAutofillToDate : Test Case Passed
+11:43:58.450 INFO  TRRACS -TC05_adCodeField : Test Case Skipped
+11:43:58.498 INFO  TRRACS -TC06_ieCodeField : Test Case Execution Begins
+11:43:58.498 INFO  TRRACS -Initialization Of Driver Factory Begins...
+11:43:59.711 INFO  TRRACS -Thread Safe WebDriver Instance is Set...
+11:43:59.845 INFO  TRRACS -Successfully Launched Local:Chrome
+11:43:59.847 INFO  TRRACS -TC06_ieCodeField : Test Case Skipped
+11:44:00.516 INFO  TRRACS -TC06_ieCodeField : Test Case Skipped
+11:44:00.559 INFO  TRRACS -TC07_remittanceStatusField : Test Case Execution Begins
+11:44:00.559 INFO  TRRACS -Initialization Of Driver Factory Begins...
+11:44:01.708 INFO  TRRACS -Thread Safe WebDriver Instance is Set...
+11:44:01.822 INFO  TRRACS -Successfully Launched Local:Chrome
+11:44:01.822 INFO  TRRACS -TC07_remittanceStatusField : Test Case Skipped
+11:44:02.452 INFO  TRRACS -TC07_remittanceStatusField : Test Case Skipped
+11:44:02.455 INFO  TRRACS -TC08_clickSearchButton : Test Case Execution Begins
+11:44:02.455 INFO  TRRACS -Initialization Of Driver Factory Begins...
+11:44:03.565 INFO  TRRACS -Thread Safe WebDriver Instance is Set...
+11:44:03.682 INFO  TRRACS -Successfully Launched Local:Chrome
+11:44:03.682 INFO  TRRACS -TC08_clickSearchButton : Test Case Skipped
+11:44:04.283 INFO  TRRACS -TC08_clickSearchButton : Test Case Skipped
+11:44:04.286 INFO  TRRACS -TC09_downloadORM : Test Case Execution Begins
+11:44:04.286 INFO  TRRACS -Initialization Of Driver Factory Begins...
+11:44:05.432 INFO  TRRACS -Thread Safe WebDriver Instance is Set...
+11:44:05.560 INFO  TRRACS -Successfully Launched Local:Chrome
+11:44:05.560 INFO  TRRACS -TC09_downloadORM : Test Case Skipped
+11:44:06.176 INFO  TRRACS -TC09_downloadORM : Test Case Skipped
+11:44:06.212 INFO  TRRACS -TC10_uploadOrmFile : Test Case Execution Begins
+11:44:06.213 INFO  TRRACS -Initialization Of Driver Factory Begins...
+11:44:07.334 INFO  TRRACS -Thread Safe WebDriver Instance is Set...
+11:44:07.455 INFO  TRRACS -Successfully Launched Local:Chrome
+11:44:07.457 INFO  TRRACS -TC10_uploadOrmFile : Test Case Skipped
+11:44:08.104 INFO  TRRACS -TC10_uploadOrmFile : Test Case Skipped
+11:44:08.108 INFO  TRRACS -TC11_navigateToAddRemittance : Test Case Execution Begins
+11:44:08.108 INFO  TRRACS -Initialization Of Driver Factory Begins...
+11:44:08.197 INFO  TRRACS -T002_checkAutofillToDate : Test Case Passed
+11:44:09.217 INFO  TRRACS -Thread Safe WebDriver Instance is Set...
+11:44:09.338 INFO  TRRACS -Successfully Launched Local:Chrome
+11:44:09.341 INFO  TRRACS -TC11_navigateToAddRemittance : Test Case Skipped
+11:44:09.975 INFO  TRRACS -TC11_navigateToAddRemittance : Test Case Skipped
+11:44:09.978 INFO  TRRACS -TC12_viewORMDetails : Test Case Execution Begins
+11:44:09.978 INFO  TRRACS -Initialization Of Driver Factory Begins...
+11:44:11.267 INFO  TRRACS -Thread Safe WebDriver Instance is Set...
+11:44:11.382 INFO  TRRACS -Successfully Launched Local:Chrome
+11:44:11.383 INFO  TRRACS -TC12_viewORMDetails : Test Case Skipped
+11:44:12.004 INFO  TRRACS -TC12_viewORMDetails : Test Case Skipped
+11:44:12.005 INFO  TRRACS -TC13_editORM : Test Case Execution Begins
+11:44:12.006 INFO  TRRACS -Initialization Of Driver Factory Begins...
+11:44:13.120 INFO  TRRACS -Thread Safe WebDriver Instance is Set...
+11:44:13.236 INFO  TRRACS -Successfully Launched Local:Chrome
+11:44:13.237 INFO  TRRACS -TC13_editORM : Test Case Skipped
+11:44:13.884 INFO  TRRACS -TC13_editORM : Test Case Skipped
+11:44:13.888 INFO  TRRACS -TC14_cancelORM : Test Case Execution Begins
+11:44:13.888 INFO  TRRACS -Initialization Of Driver Factory Begins...
+11:44:15.094 INFO  TRRACS -Thread Safe WebDriver Instance is Set...
+11:44:15.212 INFO  TRRACS -Successfully Launched Local:Chrome
+11:44:15.214 INFO  TRRACS -TC14_cancelORM : Test Case Skipped
+11:44:15.834 INFO  TRRACS -TC14_cancelORM : Test Case Skipped
+11:44:15.865 INFO  TRRACS -ORM Master : Test Ends
+11:44:18.420 INFO  TRRACS -T003_searchByBOEnumber : Test Case Failed
+11:44:23.213 INFO  TRRACS -T004_checkAdCodeAutoDisable : Test Case Failed
+11:44:24.041 INFO  TRRACS -T005_uploadBOEFile : Test Case Passed
+11:44:24.064 INFO  TRRACS -T006_DownloadCSVFile : Test Case Failed
+11:44:24.096 INFO  TRRACS -T007_ViewBOE : Test Case Failed
+11:44:24.131 INFO  TRRACS -T008_RaiseBOEClosure : Test Case Failed
+11:44:24.173 INFO  TRRACS -BOEClosureTest : Test Ends
+11:44:25.031 INFO  TRRACS -Suite : Test suite Ends
+11:45:29.509 INFO  TRRACS -Suite : Test Suite Begins
+11:45:29.514 INFO  TRRACS -Gathering Configuration Properties...
+11:45:29.516 INFO  TRRACS -Successfully Gathered Configuration Properties...
+11:45:29.586 INFO  TRRACS -BOEExtensionTest : Test Begins
+11:45:29.586 INFO  TRRACS -Initialization Of Driver Factory Begins...
+11:45:29.586 INFO  TRRACS -BOEClosureTest : Test Begins
+11:45:29.587 INFO  TRRACS -Initialization Of Driver Factory Begins...
+11:45:31.673 INFO  TRRACS -Thread Safe WebDriver Instance is Set...
+11:45:31.673 INFO  TRRACS -Thread Safe WebDriver Instance is Set...
+11:45:31.796 INFO  TRRACS -Successfully Launched Local:Chrome
+11:45:31.799 INFO  TRRACS -Successfully Launched Local:Chrome
+11:45:46.640 INFO  TRRACS -T001_openBOEExtension : Test Case Skipped
+11:45:47.487 INFO  TRRACS -BOEExtensionTest : Test Ends
+11:45:48.548 INFO  TRRACS -T001_openBOEClosure : Test Case Failed
+11:45:48.714 INFO  TRRACS -T002_checkAutofillToDate : Test Case Passed
+11:45:48.719 INFO  TRRACS -T002_checkAutofillToDate : Test Case Passed
+11:45:48.755 INFO  TRRACS -T003_searchByBOEnumber : Test Case Failed
+11:45:48.760 INFO  TRRACS -T004_checkAdCodeAutoDisable : Test Case Failed
+11:45:48.796 INFO  TRRACS -T005_uploadBOEFile : Test Case Failed
+11:45:48.827 INFO  TRRACS -T006_DownloadCSVFile : Test Case Failed
+11:45:48.868 INFO  TRRACS -T007_ViewBOE : Test Case Failed
+11:45:48.905 INFO  TRRACS -T008_RaiseBOEClosure : Test Case Failed
+11:45:48.917 INFO  TRRACS -BOEClosureTest : Test Ends
+11:56:38.107 INFO  TRRACS -Suite : Test Suite Begins
+11:56:38.112 INFO  TRRACS -Gathering Configuration Properties...
+11:56:38.115 INFO  TRRACS -Successfully Gathered Configuration Properties...
+11:56:38.215 INFO  TRRACS -BOEClosureTest : Test Begins
+11:56:38.215 INFO  TRRACS -Initialization Of Driver Factory Begins...
+11:56:38.215 INFO  TRRACS -BOEExtensionTest : Test Begins
+11:56:38.215 INFO  TRRACS -Initialization Of Driver Factory Begins...
+11:56:45.158 INFO  TRRACS -Thread Safe WebDriver Instance is Set...
+11:56:45.158 INFO  TRRACS -Thread Safe WebDriver Instance is Set...
+11:56:45.485 INFO  TRRACS -Successfully Launched Local:Chrome
+11:56:45.485 INFO  TRRACS -Successfully Launched Local:Chrome
+11:57:14.598 INFO  TRRACS -T001_openBOEExtension : Test Case Passed
+11:57:20.678 INFO  TRRACS -T001_openBOEClosure : Test Case Passed
+11:57:27.516 INFO  TRRACS -T002_checkAutofillToDate : Test Case Passed
+11:57:33.572 INFO  TRRACS -T002_checkAutofillToDate : Test Case Passed
+11:57:40.218 INFO  TRRACS -T002_checkAutofillToDate : Test Case Passed
+11:57:49.468 INFO  TRRACS -T002_checkAutofillToDate : Test Case Passed
+11:57:53.212 INFO  TRRACS -T003_searchByBOEnumber : Test Case Passed
+11:57:58.403 INFO  TRRACS -T004_checkAdCodeAutoDisable : Test Case Passed
+11:58:02.295 INFO  TRRACS -T003_searchByBOEnumber : Test Case Passed
+11:58:02.647 INFO  TRRACS -T005_uploadBOEFile : Test Case Passed
+11:58:07.516 INFO  TRRACS -T004_checkAdCodeAutoDisable : Test Case Passed
+11:58:11.670 INFO  TRRACS -T005_uploadBOEFile : Test Case Passed
+11:58:20.079 INFO  TRRACS -T006_DownloadCSVFile : Test Case Passed
+11:58:29.115 INFO  TRRACS -T006_DownloadCSVFile : Test Case Passed
+11:59:08.111 INFO  TRRACS -Suite : Test Suite Begins
+11:59:08.115 INFO  TRRACS -Gathering Configuration Properties...
+11:59:08.117 INFO  TRRACS -Successfully Gathered Configuration Properties...
+11:59:08.121 INFO  TRRACS -Suite : Test Suite Begins
+11:59:08.121 INFO  TRRACS -Gathering Configuration Properties...
+11:59:08.121 INFO  TRRACS -Successfully Gathered Configuration Properties...
+11:59:08.191 INFO  TRRACS -BOEExtensionTest : Test Begins
+11:59:08.191 INFO  TRRACS -Initialization Of Driver Factory Begins...
+11:59:08.191 INFO  TRRACS -BOEClosureTest : Test Begins
+11:59:08.191 INFO  TRRACS -Initialization Of Driver Factory Begins...
+11:59:08.192 INFO  TRRACS -ORM Master : Test Begins
+11:59:08.192 INFO  TRRACS -Initialization Of Driver Factory Begins...
+11:59:10.416 INFO  TRRACS -Thread Safe WebDriver Instance is Set...
+11:59:10.576 INFO  TRRACS -Successfully Launched Local:Chrome
+11:59:10.748 INFO  TRRACS -Thread Safe WebDriver Instance is Set...
+11:59:10.869 INFO  TRRACS -Thread Safe WebDriver Instance is Set...
+11:59:10.899 INFO  TRRACS -Successfully Launched Local:Chrome
+11:59:11.005 INFO  TRRACS -Successfully Launched Local:Chrome
+11:59:28.788 INFO  TRRACS -TC01_navigateToOrmMaster : Test Case Execution Begins
+11:59:28.788 INFO  TRRACS -Initialization Of Driver Factory Begins...
+11:59:30.106 INFO  TRRACS -Thread Safe WebDriver Instance is Set...
+11:59:30.220 INFO  TRRACS -Successfully Launched Local:Chrome
+11:59:33.636 INFO  TRRACS -TC01_navigateToOrmMaster : Test Case Failed
+11:59:34.276 INFO  TRRACS -TC01_navigateToOrmMaster : Test Case Failed
+11:59:34.288 INFO  TRRACS -TC01_navigateToOrmMaster : Test Case Ends
+11:59:34.386 INFO  TRRACS -TC02_checkPresenceofElements : Test Case Execution Begins
+11:59:34.386 INFO  TRRACS -Initialization Of Driver Factory Begins...
+11:59:35.637 INFO  TRRACS -Thread Safe WebDriver Instance is Set...
+11:59:35.751 INFO  TRRACS -Successfully Launched Local:Chrome
+11:59:35.752 INFO  TRRACS -TC02_checkPresenceofElements : Test Case Skipped
+11:59:36.376 INFO  TRRACS -TC02_checkPresenceofElements : Test Case Skipped
+11:59:36.418 INFO  TRRACS -TC03_selectDate : Test Case Execution Begins
+11:59:36.418 INFO  TRRACS -Initialization Of Driver Factory Begins...
+11:59:37.740 INFO  TRRACS -Thread Safe WebDriver Instance is Set...
+11:59:37.861 INFO  TRRACS -Successfully Launched Local:Chrome
+11:59:37.864 INFO  TRRACS -TC03_selectDate : Test Case Skipped
+11:59:38.531 INFO  TRRACS -TC03_selectDate : Test Case Skipped
+11:59:38.571 INFO  TRRACS -TC04_ormReferenceNumberField : Test Case Execution Begins
+11:59:38.571 INFO  TRRACS -Initialization Of Driver Factory Begins...
+11:59:39.912 INFO  TRRACS -Thread Safe WebDriver Instance is Set...
+11:59:40.034 INFO  TRRACS -Successfully Launched Local:Chrome
+11:59:40.036 INFO  TRRACS -TC04_ormReferenceNumberField : Test Case Skipped
+11:59:40.671 INFO  TRRACS -TC04_ormReferenceNumberField : Test Case Skipped
+11:59:40.709 INFO  TRRACS -TC05_adCodeField : Test Case Execution Begins
+11:59:40.709 INFO  TRRACS -Initialization Of Driver Factory Begins...
+11:59:41.972 INFO  TRRACS -Thread Safe WebDriver Instance is Set...
+11:59:42.085 INFO  TRRACS -Successfully Launched Local:Chrome
+11:59:42.086 INFO  TRRACS -TC05_adCodeField : Test Case Skipped
+11:59:42.738 INFO  TRRACS -TC05_adCodeField : Test Case Skipped
+11:59:42.770 INFO  TRRACS -TC06_ieCodeField : Test Case Execution Begins
+11:59:42.771 INFO  TRRACS -Initialization Of Driver Factory Begins...
+11:59:43.860 INFO  TRRACS -Thread Safe WebDriver Instance is Set...
+11:59:43.979 INFO  TRRACS -Successfully Launched Local:Chrome
+11:59:43.981 INFO  TRRACS -TC06_ieCodeField : Test Case Skipped
+11:59:44.880 INFO  TRRACS -TC06_ieCodeField : Test Case Skipped
+11:59:44.962 INFO  TRRACS -TC07_remittanceStatusField : Test Case Execution Begins
+11:59:44.963 INFO  TRRACS -Initialization Of Driver Factory Begins...
+11:59:45.456 INFO  TRRACS -T001_openBOEClosure : Test Case Passed
+11:59:46.086 INFO  TRRACS -Thread Safe WebDriver Instance is Set...
+11:59:46.204 INFO  TRRACS -Successfully Launched Local:Chrome
+11:59:46.206 INFO  TRRACS -TC07_remittanceStatusField : Test Case Skipped
+11:59:47.013 INFO  TRRACS -TC07_remittanceStatusField : Test Case Skipped
+11:59:47.018 INFO  TRRACS -TC08_clickSearchButton : Test Case Execution Begins
+11:59:47.018 INFO  TRRACS -Initialization Of Driver Factory Begins...
+11:59:48.191 INFO  TRRACS -Thread Safe WebDriver Instance is Set...
+11:59:48.317 INFO  TRRACS -Successfully Launched Local:Chrome
+11:59:48.318 INFO  TRRACS -TC08_clickSearchButton : Test Case Skipped
+11:59:48.444 INFO  TRRACS -T001_openBOEExtension : Test Case Passed
+11:59:48.955 INFO  TRRACS -TC08_clickSearchButton : Test Case Skipped
+11:59:48.957 INFO  TRRACS -TC09_downloadORM : Test Case Execution Begins
+11:59:48.957 INFO  TRRACS -Initialization Of Driver Factory Begins...
+11:59:50.180 INFO  TRRACS -Thread Safe WebDriver Instance is Set...
+11:59:50.305 INFO  TRRACS -Successfully Launched Local:Chrome
+11:59:50.306 INFO  TRRACS -TC09_downloadORM : Test Case Skipped
+11:59:50.904 INFO  TRRACS -TC09_downloadORM : Test Case Skipped
+11:59:50.946 INFO  TRRACS -TC10_uploadOrmFile : Test Case Execution Begins
+11:59:50.946 INFO  TRRACS -Initialization Of Driver Factory Begins...
+11:59:52.106 INFO  TRRACS -Thread Safe WebDriver Instance is Set...
+11:59:52.233 INFO  TRRACS -Successfully Launched Local:Chrome
+11:59:52.235 INFO  TRRACS -TC10_uploadOrmFile : Test Case Skipped
+11:59:52.856 INFO  TRRACS -TC10_uploadOrmFile : Test Case Skipped
+11:59:52.860 INFO  TRRACS -TC11_navigateToAddRemittance : Test Case Execution Begins
+11:59:52.861 INFO  TRRACS -Initialization Of Driver Factory Begins...
+11:59:53.977 INFO  TRRACS -Thread Safe WebDriver Instance is Set...
+11:59:54.095 INFO  TRRACS -Successfully Launched Local:Chrome
+11:59:54.097 INFO  TRRACS -TC11_navigateToAddRemittance : Test Case Skipped
+11:59:54.824 INFO  TRRACS -TC11_navigateToAddRemittance : Test Case Skipped
+11:59:54.826 INFO  TRRACS -TC12_viewORMDetails : Test Case Execution Begins
+11:59:54.826 INFO  TRRACS -Initialization Of Driver Factory Begins...
+11:59:55.883 INFO  TRRACS -Thread Safe WebDriver Instance is Set...
+11:59:56.001 INFO  TRRACS -Successfully Launched Local:Chrome
+11:59:56.002 INFO  TRRACS -TC12_viewORMDetails : Test Case Skipped
+11:59:56.638 INFO  TRRACS -TC12_viewORMDetails : Test Case Skipped
+11:59:56.641 INFO  TRRACS -TC13_editORM : Test Case Execution Begins
+11:59:56.641 INFO  TRRACS -Initialization Of Driver Factory Begins...
+11:59:57.801 INFO  TRRACS -Thread Safe WebDriver Instance is Set...
+11:59:57.922 INFO  TRRACS -Successfully Launched Local:Chrome
+11:59:57.923 INFO  TRRACS -TC13_editORM : Test Case Skipped
+11:59:58.588 INFO  TRRACS -TC13_editORM : Test Case Skipped
+11:59:58.590 INFO  TRRACS -TC14_cancelORM : Test Case Execution Begins
+11:59:58.590 INFO  TRRACS -Initialization Of Driver Factory Begins...
+11:59:59.735 INFO  TRRACS -Thread Safe WebDriver Instance is Set...
+11:59:59.846 INFO  TRRACS -Successfully Launched Local:Chrome
+11:59:59.847 INFO  TRRACS -TC14_cancelORM : Test Case Skipped
+12:00:00.516 INFO  TRRACS -TC14_cancelORM : Test Case Skipped
+12:00:00.609 INFO  TRRACS -ORM Master : Test Ends
+12:00:01.268 INFO  TRRACS -T002_checkAutofillToDate : Test Case Passed
+12:00:01.424 INFO  TRRACS -T002_checkAutofillToDate : Test Case Passed
+12:00:14.450 INFO  TRRACS -T002_checkAutofillToDate : Test Case Passed
+12:00:16.482 INFO  TRRACS -T002_checkAutofillToDate : Test Case Passed
+12:00:27.561 INFO  TRRACS -T003_searchByBOEnumber : Test Case Passed
+12:00:29.402 INFO  TRRACS -T003_searchByBOEnumber : Test Case Passed
+12:00:32.777 INFO  TRRACS -T004_checkAdCodeAutoDisable : Test Case Passed
+12:00:34.620 INFO  TRRACS -T004_checkAdCodeAutoDisable : Test Case Passed
+12:00:36.968 INFO  TRRACS -T005_uploadBOEFile : Test Case Passed
+12:00:38.784 INFO  TRRACS -T005_uploadBOEFile : Test Case Passed
+12:00:54.364 INFO  TRRACS -T006_DownloadCSVFile : Test Case Passed
+12:00:56.283 INFO  TRRACS -T006_DownloadCSVFile : Test Case Passed
+12:01:16.975 INFO  TRRACS -T007_ViewBOE : Test Case Passed
+12:01:17.527 INFO  TRRACS -T007_ViewBOE : Test Case Passed
+12:02:00.107 INFO  TRRACS -Suite : Test Suite Begins
+12:02:00.111 INFO  TRRACS -Gathering Configuration Properties...
+12:02:00.113 INFO  TRRACS -Successfully Gathered Configuration Properties...
+12:02:10.190 INFO  TRRACS -BOEExtensionTest : Test Begins
+12:02:10.190 INFO  TRRACS -Initialization Of Driver Factory Begins...
+12:02:10.196 INFO  TRRACS -BOEClosureTest : Test Begins
+12:02:10.196 INFO  TRRACS -Initialization Of Driver Factory Begins...
+12:02:10.198 INFO  TRRACS -ORM Master : Test Begins
+12:02:10.199 INFO  TRRACS -Initialization Of Driver Factory Begins...
+12:02:12.521 INFO  TRRACS -Thread Safe WebDriver Instance is Set...
+12:02:12.699 INFO  TRRACS -Successfully Launched Local:Chrome
+12:02:12.737 INFO  TRRACS -Thread Safe WebDriver Instance is Set...
+12:02:12.933 INFO  TRRACS -Thread Safe WebDriver Instance is Set...
+12:02:12.960 INFO  TRRACS -Successfully Launched Local:Chrome
+12:02:13.077 INFO  TRRACS -Successfully Launched Local:Chrome
+12:02:27.065 INFO  TRRACS -ORM Master : Test Ends
+12:02:51.821 INFO  TRRACS -T001_openBOEExtension : Test Case Passed
+12:02:55.503 INFO  TRRACS -T001_openBOEClosure : Test Case Passed
+12:03:04.574 INFO  TRRACS -T002_checkAutofillToDate : Test Case Passed
+12:03:08.252 INFO  TRRACS -T002_checkAutofillToDate : Test Case Passed
+12:03:17.300 INFO  TRRACS -T002_checkAutofillToDate : Test Case Passed
+12:03:23.193 INFO  TRRACS -T002_checkAutofillToDate : Test Case Passed
+12:03:30.162 INFO  TRRACS -T003_searchByBOEnumber : Test Case Passed
+12:03:35.364 INFO  TRRACS -T004_checkAdCodeAutoDisable : Test Case Passed
+12:03:36.074 INFO  TRRACS -T003_searchByBOEnumber : Test Case Passed
+12:03:39.550 INFO  TRRACS -T005_uploadBOEFile : Test Case Passed
+12:03:41.255 INFO  TRRACS -T004_checkAdCodeAutoDisable : Test Case Passed
+12:03:45.443 INFO  TRRACS -T005_uploadBOEFile : Test Case Passed
+12:03:57.213 INFO  TRRACS -T006_DownloadCSVFile : Test Case Passed
+12:04:03.071 INFO  TRRACS -T006_DownloadCSVFile : Test Case Passed
+12:04:20.330 INFO  TRRACS -T007_ViewBOE : Test Case Passed
+12:04:23.672 INFO  TRRACS -T007_ViewBOE : Test Case Passed
+12:04:58.999 INFO  TRRACS -T008_RaiseBOEExtension : Test Case Passed
+12:05:00.246 INFO  TRRACS -T008_RaiseBOEClosure : Test Case Failed
+12:05:00.683 INFO  TRRACS -BOEClosureTest : Test Ends
+12:05:15.844 INFO  TRRACS -T009_cancelBOEExtension : Test Case Failed
+12:05:16.204 INFO  TRRACS -BOEExtensionTest : Test Ends
+12:11:47.715 INFO  TRRACS -Suite : Test Suite Begins
+12:11:47.715 INFO  TRRACS -Gathering Configuration Properties...
+12:11:47.715 INFO  TRRACS -Successfully Gathered Configuration Properties...
+12:11:47.793 INFO  TRRACS -ORM Master : Test Begins
+12:11:47.793 INFO  TRRACS -Initialization Of Driver Factory Begins...
+12:11:47.793 INFO  TRRACS -BOEClosureTest : Test Begins
+12:11:47.793 INFO  TRRACS -Initialization Of Driver Factory Begins...
+12:11:47.793 INFO  TRRACS -BOEExtensionTest : Test Begins
+12:11:47.793 INFO  TRRACS -Initialization Of Driver Factory Begins...
+12:11:50.112 INFO  TRRACS -Thread Safe WebDriver Instance is Set...
+12:11:50.112 INFO  TRRACS -Thread Safe WebDriver Instance is Set...
+12:11:50.270 INFO  TRRACS -Successfully Launched Local:Chrome
+12:11:50.289 INFO  TRRACS -Successfully Launched Local:Chrome
+12:11:50.415 INFO  TRRACS -Thread Safe WebDriver Instance is Set...
+12:11:50.538 INFO  TRRACS -Successfully Launched Local:Chrome
+12:12:13.465 INFO  TRRACS -ORM Master : Test Ends
+12:12:30.692 INFO  TRRACS -T001_openBOEClosure : Test Case Passed
+12:12:32.147 INFO  TRRACS -T001_openBOEExtension : Test Case Passed
+12:12:43.840 INFO  TRRACS -T002_checkAutofillToDate : Test Case Passed
+12:12:44.991 INFO  TRRACS -T002_checkAutofillToDate : Test Case Passed
+12:12:57.824 INFO  TRRACS -T002_checkAutofillToDate : Test Case Passed
+12:12:58.879 INFO  TRRACS -T002_checkAutofillToDate : Test Case Passed
+12:13:10.841 INFO  TRRACS -T003_searchByBOEnumber : Test Case Passed
+12:13:11.924 INFO  TRRACS -T003_searchByBOEnumber : Test Case Passed
+12:13:16.064 INFO  TRRACS -T004_checkAdCodeAutoDisable : Test Case Passed
+12:13:17.151 INFO  TRRACS -T004_checkAdCodeAutoDisable : Test Case Passed
+12:13:20.259 INFO  TRRACS -T005_uploadBOEFile : Test Case Passed
+12:13:21.353 INFO  TRRACS -T005_uploadBOEFile : Test Case Passed
+12:13:37.838 INFO  TRRACS -T006_DownloadCSVFile : Test Case Passed
+12:13:39.056 INFO  TRRACS -T006_DownloadCSVFile : Test Case Passed
+12:14:00.271 INFO  TRRACS -T007_ViewBOE : Test Case Passed
+12:14:01.205 INFO  TRRACS -T007_ViewBOE : Test Case Passed
+12:14:37.580 INFO  TRRACS -T008_RaiseBOEClosure : Test Case Failed
+12:14:37.926 INFO  TRRACS -BOEClosureTest : Test Ends
+12:14:40.001 INFO  TRRACS -T008_RaiseBOEExtension : Test Case Passed
+12:15:07.255 INFO  TRRACS -T009_cancelBOEExtension : Test Case Failed
+12:15:07.749 INFO  TRRACS -BOEExtensionTest : Test Ends
+12:16:10.592 INFO  TRRACS -Suite : Test Suite Begins
+12:16:10.592 INFO  TRRACS -Gathering Configuration Properties...
+12:16:10.592 INFO  TRRACS -Successfully Gathered Configuration Properties...
+12:16:10.670 INFO  TRRACS -ORM Master : Test Begins
+12:16:10.670 INFO  TRRACS -Initialization Of Driver Factory Begins...
+12:16:10.670 INFO  TRRACS -BOEExtensionTest : Test Begins
+12:16:10.670 INFO  TRRACS -Initialization Of Driver Factory Begins...
+12:16:10.670 INFO  TRRACS -BOEClosureTest : Test Begins
+12:16:10.670 INFO  TRRACS -Initialization Of Driver Factory Begins...
+12:16:12.743 INFO  TRRACS -Thread Safe WebDriver Instance is Set...
+12:16:12.886 INFO  TRRACS -Successfully Launched Local:Chrome
+12:16:13.020 INFO  TRRACS -Thread Safe WebDriver Instance is Set...
+12:16:13.190 INFO  TRRACS -Thread Safe WebDriver Instance is Set...
+12:16:13.200 INFO  TRRACS -Successfully Launched Local:Chrome
+12:16:13.330 INFO  TRRACS -Successfully Launched Local:Chrome
+12:16:33.427 INFO  TRRACS -ORM Master : Test Ends
+12:16:47.274 INFO  TRRACS -T001_openBOEClosure : Test Case Passed
+12:16:47.285 INFO  TRRACS -BOEClosureTest : Test Ends
+12:17:00.885 INFO  TRRACS -T001_openBOEExtension : Test Case Passed
+12:17:00.901 INFO  TRRACS -BOEExtensionTest : Test Ends
+12:17:26.310 INFO  TRRACS -Suite : Test Suite Begins
+12:17:26.325 INFO  TRRACS -Gathering Configuration Properties...
+12:17:26.325 INFO  TRRACS -Successfully Gathered Configuration Properties...
+12:17:26.403 INFO  TRRACS -ORM Master : Test Begins
+12:17:26.403 INFO  TRRACS -Initialization Of Driver Factory Begins...
+12:17:26.403 INFO  TRRACS -BOEExtensionTest : Test Begins
+12:17:26.403 INFO  TRRACS -Initialization Of Driver Factory Begins...
+12:17:28.287 INFO  TRRACS -Thread Safe WebDriver Instance is Set...
+12:17:28.412 INFO  TRRACS -Successfully Launched Local:Chrome
+12:17:28.572 INFO  TRRACS -Thread Safe WebDriver Instance is Set...
+12:17:28.713 INFO  TRRACS -Successfully Launched Local:Chrome
+12:17:47.456 INFO  TRRACS -ORM Master : Test Ends
+12:18:24.346 INFO  TRRACS -T001_openBOEExtension : Test Case Failed
+12:18:38.760 INFO  TRRACS -BOEExtensionTest : Test Ends
+12:20:47.201 INFO  TRRACS -Suite : Test Suite Begins
+12:20:47.201 INFO  TRRACS -Gathering Configuration Properties...
+12:20:47.201 INFO  TRRACS -Successfully Gathered Configuration Properties...
+12:20:47.295 INFO  TRRACS -BOEExtensionTest : Test Begins
+12:20:47.295 INFO  TRRACS -Initialization Of Driver Factory Begins...
+12:20:47.295 INFO  TRRACS -ORM Master : Test Begins
+12:20:47.295 INFO  TRRACS -Initialization Of Driver Factory Begins...
+12:20:49.333 INFO  TRRACS -Thread Safe WebDriver Instance is Set...
+12:20:49.341 INFO  TRRACS -Thread Safe WebDriver Instance is Set...
+12:20:49.459 INFO  TRRACS -Successfully Launched Local:Chrome
+12:20:49.459 INFO  TRRACS -Successfully Launched Local:Chrome
+12:21:05.474 INFO  TRRACS -ORM Master : Test Ends
+12:21:31.545 INFO  TRRACS -T001_openBOEExtension : Test Case Passed
+12:21:31.576 INFO  TRRACS -BOEExtensionTest : Test Ends
+12:22:37.179 INFO  TRRACS -Suite : Test Suite Begins
+12:22:37.179 INFO  TRRACS -Gathering Configuration Properties...
+12:22:37.179 INFO  TRRACS -Successfully Gathered Configuration Properties...
+12:22:37.257 INFO  TRRACS -ORM Master : Test Begins
+12:22:37.257 INFO  TRRACS -Initialization Of Driver Factory Begins...
+12:22:37.257 INFO  TRRACS -BOEExtensionTest : Test Begins
+12:22:37.257 INFO  TRRACS -Initialization Of Driver Factory Begins...
+12:22:39.080 INFO  TRRACS -Thread Safe WebDriver Instance is Set...
+12:22:39.093 INFO  TRRACS -Thread Safe WebDriver Instance is Set...
+12:22:39.214 INFO  TRRACS -Successfully Launched Local:Chrome
+12:22:39.214 INFO  TRRACS -Successfully Launched Local:Chrome
+12:22:58.322 INFO  TRRACS -ORM Master : Test Ends
+12:23:26.965 INFO  TRRACS -T001_openBOEExtension : Test Case Failed
+12:23:37.723 INFO  TRRACS -BOEExtensionTest : Test Ends
+12:25:15.726 INFO  TRRACS -Suite : Test Suite Begins
+12:25:15.726 INFO  TRRACS -Gathering Configuration Properties...
+12:25:15.741 INFO  TRRACS -Successfully Gathered Configuration Properties...
+12:25:15.804 INFO  TRRACS -OrmMasterPageTest : Test Begins
+12:25:15.804 INFO  TRRACS -Initialization Of Driver Factory Begins...
+12:25:15.804 INFO  TRRACS -BOEExtensionTest : Test Begins
+12:25:15.804 INFO  TRRACS -Initialization Of Driver Factory Begins...
+12:25:17.697 INFO  TRRACS -Thread Safe WebDriver Instance is Set...
+12:25:17.764 INFO  TRRACS -Thread Safe WebDriver Instance is Set...
+12:25:17.823 INFO  TRRACS -Successfully Launched Local:Chrome
+12:25:17.880 INFO  TRRACS -Successfully Launched Local:Chrome
+12:25:35.674 INFO  TRRACS -OrmMasterPageTest : Test Ends
+12:26:00.139 INFO  TRRACS -T001_openBOEExtension : Test Case Passed
+12:26:00.171 INFO  TRRACS -BOEExtensionTest : Test Ends
+12:35:50.268 INFO  TRRACS -Suite : Test Suite Begins
+12:35:50.284 INFO  TRRACS -Gathering Configuration Properties...
+12:35:50.284 INFO  TRRACS -Successfully Gathered Configuration Properties...
+12:35:50.346 INFO  TRRACS -OrmMasterPageTest : Test Begins
+12:35:50.362 INFO  TRRACS -Initialization Of Driver Factory Begins...
+12:35:51.953 INFO  TRRACS -Thread Safe WebDriver Instance is Set...
+12:35:52.076 INFO  TRRACS -Successfully Launched Local:Chrome
+12:36:16.266 INFO  TRRACS -OrmMasterPageTest : Test Ends
+12:36:30.625 INFO  TRRACS -Suite : Test Suite Begins
+12:36:30.625 INFO  TRRACS -Gathering Configuration Properties...
+12:36:30.625 INFO  TRRACS -Successfully Gathered Configuration Properties...
+12:36:30.703 INFO  TRRACS -OrmMasterPageTest : Test Begins
+12:36:30.703 INFO  TRRACS -Initialization Of Driver Factory Begins...
+12:36:32.249 INFO  TRRACS -Thread Safe WebDriver Instance is Set...
+12:36:32.370 INFO  TRRACS -Successfully Launched Local:Chrome
+12:36:45.108 INFO  TRRACS -OrmMasterPageTest : Test Ends
+12:37:01.304 INFO  TRRACS -Suite : Test Suite Begins
+12:37:01.304 INFO  TRRACS -Gathering Configuration Properties...
+12:37:01.304 INFO  TRRACS -Successfully Gathered Configuration Properties...
+12:37:01.398 INFO  TRRACS -OrmMasterPageTest : Test Begins
+12:37:01.398 INFO  TRRACS -Initialization Of Driver Factory Begins...
+12:37:03.065 INFO  TRRACS -Thread Safe WebDriver Instance is Set...
+12:37:03.188 INFO  TRRACS -Successfully Launched Local:Chrome
+12:38:21.164 INFO  TRRACS -OrmMasterPageTest : Test Ends
+12:40:31.489 INFO  TRRACS -Suite : Test Suite Begins
+12:40:31.489 INFO  TRRACS -Gathering Configuration Properties...
+12:40:31.489 INFO  TRRACS -Successfully Gathered Configuration Properties...
+12:40:31.567 INFO  TRRACS -OrmMasterPageTest : Test Begins
+12:40:31.567 INFO  TRRACS -Initialization Of Driver Factory Begins...
+12:40:33.058 INFO  TRRACS -Thread Safe WebDriver Instance is Set...
+12:40:33.187 INFO  TRRACS -Successfully Launched Local:Chrome
+12:41:01.623 INFO  TRRACS -OrmMasterPageTest : Test Ends
+12:42:20.780 INFO  TRRACS -Suite : Test Suite Begins
+12:42:20.780 INFO  TRRACS -Gathering Configuration Properties...
+12:42:20.780 INFO  TRRACS -Successfully Gathered Configuration Properties...
+12:42:20.858 INFO  TRRACS -OrmMasterPageTest : Test Begins
+12:42:20.858 INFO  TRRACS -Initialization Of Driver Factory Begins...
+12:42:22.372 INFO  TRRACS -Thread Safe WebDriver Instance is Set...
+12:42:22.495 INFO  TRRACS -Successfully Launched Local:Chrome
+12:42:42.174 INFO  TRRACS -OrmMasterPageTest : Test Ends
+12:44:31.441 INFO  TRRACS -Suite : Test Suite Begins
+12:44:31.441 INFO  TRRACS -Gathering Configuration Properties...
+12:44:31.441 INFO  TRRACS -Successfully Gathered Configuration Properties...
+12:44:31.534 INFO  TRRACS -OrmMasterPageTest : Test Begins
+12:44:31.534 INFO  TRRACS -Initialization Of Driver Factory Begins...
+12:44:33.182 INFO  TRRACS -Thread Safe WebDriver Instance is Set...
+12:44:33.300 INFO  TRRACS -Successfully Launched Local:Chrome
+12:47:04.182 INFO  TRRACS -Suite : Test Suite Begins
+12:47:04.182 INFO  TRRACS -Gathering Configuration Properties...
+12:47:04.182 INFO  TRRACS -Successfully Gathered Configuration Properties...
+12:47:04.260 INFO  TRRACS -OrmMasterPageTest : Test Begins
+12:47:04.260 INFO  TRRACS -Initialization Of Driver Factory Begins...
+12:47:05.883 INFO  TRRACS -Thread Safe WebDriver Instance is Set...
+12:47:06.000 INFO  TRRACS -Successfully Launched Local:Chrome
+12:47:37.768 INFO  TRRACS -TC01_navigateToOrmMaster : Test Case Passed
+12:47:37.815 INFO  TRRACS -OrmMasterPageTest : Test Ends
+12:51:09.691 INFO  TRRACS -Suite : Test Suite Begins
+12:51:09.695 INFO  TRRACS -Gathering Configuration Properties...
+12:51:09.697 INFO  TRRACS -Successfully Gathered Configuration Properties...
+12:51:09.767 INFO  TRRACS -BOEExtensionTest : Test Begins
+12:51:09.767 INFO  TRRACS -Initialization Of Driver Factory Begins...
+12:51:09.767 INFO  TRRACS -BOEClosureTest : Test Begins
+12:51:09.768 INFO  TRRACS -Initialization Of Driver Factory Begins...
+12:51:09.768 INFO  TRRACS -OrmMasterPageTest : Test Begins
+12:51:09.768 INFO  TRRACS -Initialization Of Driver Factory Begins...
+12:51:12.005 INFO  TRRACS -Thread Safe WebDriver Instance is Set...
+12:51:12.264 INFO  TRRACS -Successfully Launched Local:Chrome
+12:51:12.333 INFO  TRRACS -Thread Safe WebDriver Instance is Set...
+12:51:12.341 INFO  TRRACS -Thread Safe WebDriver Instance is Set...
+12:51:12.510 INFO  TRRACS -Successfully Launched Local:Chrome
+12:51:12.544 INFO  TRRACS -Successfully Launched Local:Chrome
+12:51:49.375 INFO  TRRACS -TC01_navigateToOrmMaster : Test Case Passed
+12:51:50.446 INFO  TRRACS -T001_openBOEClosure : Test Case Passed
+12:51:50.480 INFO  TRRACS -BOEClosureTest : Test Ends
+12:51:50.928 INFO  TRRACS -TC02_checkPresenceofElements : Test Case Passed
+12:51:51.135 INFO  TRRACS -T001_openBOEExtension : Test Case Passed
+12:51:51.142 INFO  TRRACS -BOEExtensionTest : Test Ends
+12:52:10.862 INFO  TRRACS -TC03_selectDate : Test Case Passed
+12:52:11.057 INFO  TRRACS -TC04_ormReferenceNumberField : Test Case Passed
+12:52:15.512 INFO  TRRACS -TC05_adCodeField : Test Case Passed
+12:52:16.787 INFO  TRRACS -TC06_ieCodeField : Test Case Passed
+12:52:21.019 INFO  TRRACS -TC07_remittanceStatusField : Test Case Passed
+12:52:24.702 INFO  TRRACS -TC08_clickSearchButton : Test Case Passed
+12:52:26.716 INFO  TRRACS -TC09_downloadORM : Test Case Passed
+12:52:28.097 INFO  TRRACS -TC10_uploadOrmFile : Test Case Passed
+12:52:30.355 INFO  TRRACS -TC11_navigateToAddRemittance : Test Case Passed
+12:52:32.162 INFO  TRRACS -TC12_viewORMDetails : Test Case Passed
+12:52:36.821 INFO  TRRACS -TC13_editORM : Test Case Passed
+12:52:38.061 INFO  TRRACS -Cancelled ORM
+12:52:38.062 INFO  TRRACS -TC14_cancelORM : Test Case Passed
+12:52:38.080 INFO  TRRACS -OrmMasterPageTest : Test Ends
+13:07:11.499 INFO  TRRACS -Suite : Test Suite Begins
+13:07:11.503 INFO  TRRACS -Gathering Configuration Properties...
+13:07:11.505 INFO  TRRACS -Successfully Gathered Configuration Properties...
+13:07:11.581 INFO  TRRACS -BOEExtensionTest : Test Begins
+13:07:11.581 INFO  TRRACS -Initialization Of Driver Factory Begins...
+13:07:11.581 INFO  TRRACS -BOEClosureTest : Test Begins
+13:07:11.581 INFO  TRRACS -Initialization Of Driver Factory Begins...
+13:07:11.582 INFO  TRRACS -OrmMasterPageTest : Test Begins
+13:07:11.582 INFO  TRRACS -Initialization Of Driver Factory Begins...
+13:07:14.271 INFO  TRRACS -Thread Safe WebDriver Instance is Set...
+13:07:14.271 INFO  TRRACS -Thread Safe WebDriver Instance is Set...
+13:07:14.271 INFO  TRRACS -Thread Safe WebDriver Instance is Set...
+13:07:14.409 INFO  TRRACS -Successfully Launched Local:Chrome
+13:07:14.410 INFO  TRRACS -Successfully Launched Local:Chrome
+13:07:14.441 INFO  TRRACS -Successfully Launched Local:Chrome
+13:07:48.900 INFO  TRRACS -TC01_navigateToOrmMaster : Test Case Passed
+13:07:50.517 INFO  TRRACS -TC02_checkPresenceofElements : Test Case Passed
+13:07:50.599 INFO  TRRACS -T001_openBOEExtension : Test Case Passed
+13:07:50.616 INFO  TRRACS -BOEExtensionTest : Test Ends
+13:08:01.199 INFO  TRRACS -T001_openBOEClosure : Test Case Passed
+13:08:01.239 INFO  TRRACS -BOEClosureTest : Test Ends
+13:08:05.888 INFO  TRRACS -TC03_selectDate : Test Case Passed
+13:08:06.171 INFO  TRRACS -TC04_ormReferenceNumberField : Test Case Passed
+13:08:09.772 INFO  TRRACS -TC05_adCodeField : Test Case Passed
+13:08:11.035 INFO  TRRACS -TC06_ieCodeField : Test Case Passed
+13:08:15.356 INFO  TRRACS -TC07_remittanceStatusField : Test Case Passed
+13:08:18.932 INFO  TRRACS -TC08_clickSearchButton : Test Case Passed
+13:08:21.159 INFO  TRRACS -TC09_downloadORM : Test Case Passed
+13:08:22.419 INFO  TRRACS -TC10_uploadOrmFile : Test Case Passed
+13:08:24.639 INFO  TRRACS -TC11_navigateToAddRemittance : Test Case Passed
+13:08:26.926 INFO  TRRACS -TC12_viewORMDetails : Test Case Passed
+13:08:31.459 INFO  TRRACS -TC13_editORM : Test Case Passed
+13:08:32.557 INFO  TRRACS -TC14_cancelORM : Test Case Passed
+13:08:32.574 INFO  TRRACS -OrmMasterPageTest : Test Ends
+13:27:12.327 INFO  TRRACS -Suite : Test Suite Begins
+13:27:12.331 INFO  TRRACS -Gathering Configuration Properties...
+13:27:12.333 INFO  TRRACS -Successfully Gathered Configuration Properties...
+13:27:12.401 INFO  TRRACS -BOEExtensionTest : Test Begins
+13:27:12.401 INFO  TRRACS -Initialization Of Driver Factory Begins...
+13:27:12.402 INFO  TRRACS -OrmMasterPageTest : Test Begins
+13:27:12.402 INFO  TRRACS -Initialization Of Driver Factory Begins...
+13:27:12.403 INFO  TRRACS -BOEClosureTest : Test Begins
+13:27:12.404 INFO  TRRACS -Initialization Of Driver Factory Begins...
+13:27:14.469 INFO  TRRACS -Thread Safe WebDriver Instance is Set...
+13:27:14.664 INFO  TRRACS -Successfully Launched Local:Chrome
+13:27:14.891 INFO  TRRACS -Thread Safe WebDriver Instance is Set...
+13:27:14.925 INFO  TRRACS -Thread Safe WebDriver Instance is Set...
+13:27:15.048 INFO  TRRACS -Successfully Launched Local:Chrome
+13:27:15.060 INFO  TRRACS -Successfully Launched Local:Chrome
+13:27:25.914 INFO  TRRACS -TC01_navigateToOrmMaster : Test Case Skipped
+13:27:26.027 INFO  TRRACS -T001_openBOEClosure : Test Case Failed
+13:27:26.908 INFO  TRRACS -OrmMasterPageTest : Test Ends
+13:27:26.915 INFO  TRRACS -T002_checkAutofillToDate : Test Case Passed
+13:27:26.919 INFO  TRRACS -T002_checkAutofillToDate : Test Case Passed
+13:27:26.972 INFO  TRRACS -T003_searchByBOEnumber : Test Case Failed
+13:27:28.229 INFO  TRRACS -T004_checkAdCodeAutoDisable : Test Case Failed
+13:27:29.123 INFO  TRRACS -T005_uploadBOEFile : Test Case Failed
+13:27:29.879 INFO  TRRACS -T006_DownloadCSVFile : Test Case Failed
+13:27:30.657 INFO  TRRACS -T007_ViewBOE : Test Case Failed
+13:27:31.487 INFO  TRRACS -T008_RaiseBOEClosure : Test Case Failed
+13:27:32.251 INFO  TRRACS -BOEClosureTest : Test Ends
+13:27:45.968 INFO  TRRACS -T001_openBOEExtension : Test Case Passed
+13:27:58.806 INFO  TRRACS -T002_checkAutofillToDate : Test Case Passed
+13:28:00.047 INFO  TRRACS -T002_checkAutofillToDate : Test Case Passed
+13:28:01.239 INFO  TRRACS -T003_searchByBOEnumber : Test Case Failed
+13:28:04.841 INFO  TRRACS -T004_checkAdCodeAutoDisable : Test Case Failed
+13:28:09.322 INFO  TRRACS -T005_uploadBOEFile : Test Case Passed
+13:28:10.486 INFO  TRRACS -T006_DownloadCSVFile : Test Case Failed
+13:28:14.037 INFO  TRRACS -T007_ViewBOE : Test Case Failed
+13:28:15.535 INFO  TRRACS -T008_RaiseBOEExtension : Test Case Failed
+13:28:17.058 INFO  TRRACS -T009_cancelBOEExtension : Test Case Failed
+13:28:17.465 INFO  TRRACS -BOEExtensionTest : Test Ends
+13:28:29.260 INFO  TRRACS -Suite : Test Suite Begins
+13:28:29.264 INFO  TRRACS -Gathering Configuration Properties...
+13:28:29.266 INFO  TRRACS -Successfully Gathered Configuration Properties...
+13:28:29.340 INFO  TRRACS -BOEExtensionTest : Test Begins
+13:28:29.340 INFO  TRRACS -Initialization Of Driver Factory Begins...
+13:28:29.341 INFO  TRRACS -OrmMasterPageTest : Test Begins
+13:28:29.341 INFO  TRRACS -Initialization Of Driver Factory Begins...
+13:28:29.342 INFO  TRRACS -BOEClosureTest : Test Begins
+13:28:29.342 INFO  TRRACS -Initialization Of Driver Factory Begins...
+13:28:31.434 INFO  TRRACS -Thread Safe WebDriver Instance is Set...
+13:28:31.626 INFO  TRRACS -Thread Safe WebDriver Instance is Set...
+13:28:31.695 INFO  TRRACS -Successfully Launched Local:Chrome
+13:28:31.733 INFO  TRRACS -Thread Safe WebDriver Instance is Set...
+13:28:31.788 INFO  TRRACS -Successfully Launched Local:Chrome
+13:28:31.859 INFO  TRRACS -Successfully Launched Local:Chrome
+13:28:42.381 INFO  TRRACS -TC01_navigateToOrmMaster : Test Case Skipped
+13:28:42.384 INFO  TRRACS -T001_openBOEExtension : Test Case Skipped
+13:28:43.202 INFO  TRRACS -BOEExtensionTest : Test Ends
+13:28:43.202 INFO  TRRACS -OrmMasterPageTest : Test Ends
+13:29:16.963 INFO  TRRACS -T001_openBOEClosure : Test Case Failed
+13:29:17.933 INFO  TRRACS -T002_checkAutofillToDate : Test Case Passed
+13:29:17.936 INFO  TRRACS -T002_checkAutofillToDate : Test Case Passed
+13:29:17.969 INFO  TRRACS -T003_searchByBOEnumber : Test Case Failed
+13:29:18.786 INFO  TRRACS -T004_checkAdCodeAutoDisable : Test Case Failed
+13:29:19.585 INFO  TRRACS -T005_uploadBOEFile : Test Case Failed
+13:29:20.269 INFO  TRRACS -T006_DownloadCSVFile : Test Case Failed
+13:29:20.370 INFO  TRRACS -T007_ViewBOE : Test Case Failed
+13:29:20.428 INFO  TRRACS -T008_RaiseBOEClosure : Test Case Failed
+13:29:20.451 INFO  TRRACS -BOEClosureTest : Test Ends
+13:29:42.393 INFO  TRRACS -Suite : Test Suite Begins
+13:29:42.397 INFO  TRRACS -Gathering Configuration Properties...
+13:29:42.398 INFO  TRRACS -Successfully Gathered Configuration Properties...
+13:29:42.467 INFO  TRRACS -OrmMasterPageTest : Test Begins
+13:29:42.467 INFO  TRRACS -Initialization Of Driver Factory Begins...
+13:29:42.469 INFO  TRRACS -BOEClosureTest : Test Begins
+13:29:42.469 INFO  TRRACS -Initialization Of Driver Factory Begins...
+13:29:42.470 INFO  TRRACS -BOEExtensionTest : Test Begins
+13:29:42.470 INFO  TRRACS -Initialization Of Driver Factory Begins...
+13:29:44.645 INFO  TRRACS -Thread Safe WebDriver Instance is Set...
+13:29:44.668 INFO  TRRACS -Thread Safe WebDriver Instance is Set...
+13:29:44.835 INFO  TRRACS -Successfully Launched Local:Chrome
+13:29:44.884 INFO  TRRACS -Successfully Launched Local:Chrome
+13:29:44.910 INFO  TRRACS -Thread Safe WebDriver Instance is Set...
+13:29:45.033 INFO  TRRACS -Successfully Launched Local:Chrome
+13:29:53.773 INFO  TRRACS -T001_openBOEClosure : Test Case Skipped
+13:29:54.573 INFO  TRRACS -T001_openBOEExtension : Test Case Failed
+13:29:54.618 INFO  TRRACS -BOEClosureTest : Test Ends
+13:29:55.643 INFO  TRRACS -T002_checkAutofillToDate : Test Case Passed
+13:29:55.648 INFO  TRRACS -T002_checkAutofillToDate : Test Case Passed
+13:29:55.679 INFO  TRRACS -T003_searchByBOEnumber : Test Case Failed
+13:29:56.440 INFO  TRRACS -T004_checkAdCodeAutoDisable : Test Case Failed
+13:29:56.888 INFO  TRRACS -TC01_navigateToOrmMaster : Test Case Failed
+13:29:57.267 INFO  TRRACS -T005_uploadBOEFile : Test Case Failed
+13:29:57.714 INFO  TRRACS -TC02_checkPresenceofElements : Test Case Failed
+13:29:58.341 INFO  TRRACS -T006_DownloadCSVFile : Test Case Failed
+13:29:58.584 INFO  TRRACS -TC03_selectDate : Test Case Failed
+13:29:59.236 INFO  TRRACS -T007_ViewBOE : Test Case Failed
+13:29:59.400 INFO  TRRACS -TC04_ormReferenceNumberField : Test Case Failed
+13:30:00.042 INFO  TRRACS -T008_RaiseBOEExtension : Test Case Failed
+13:30:00.200 INFO  TRRACS -TC05_adCodeField : Test Case Failed
+13:30:00.863 INFO  TRRACS -T009_cancelBOEExtension : Test Case Failed
+13:30:00.980 INFO  TRRACS -TC06_ieCodeField : Test Case Failed
+13:30:01.663 INFO  TRRACS -BOEExtensionTest : Test Ends
+13:30:01.796 INFO  TRRACS -TC07_remittanceStatusField : Test Case Failed
+13:30:02.596 INFO  TRRACS -TC08_clickSearchButton : Test Case Failed
+13:30:03.443 INFO  TRRACS -TC09_downloadORM : Test Case Failed
+13:30:04.350 INFO  TRRACS -TC10_uploadOrmFile : Test Case Failed
+13:30:06.323 INFO  TRRACS -TC11_navigateToAddRemittance : Test Case Failed
+13:30:09.706 INFO  TRRACS -TC12_viewORMDetails : Test Case Failed
+13:30:31.761 INFO  TRRACS -TC13_editORM : Test Case Failed
+13:30:57.747 INFO  TRRACS -TC14_cancelORM : Test Case Failed
+13:30:58.694 INFO  TRRACS -OrmMasterPageTest : Test Ends
+13:31:21.241 INFO  TRRACS -Suite : Test Suite Begins
+13:31:21.246 INFO  TRRACS -Gathering Configuration Properties...
+13:31:21.247 INFO  TRRACS -Successfully Gathered Configuration Properties...
+13:31:21.323 INFO  TRRACS -BOEClosureTest : Test Begins
+13:31:21.323 INFO  TRRACS -Initialization Of Driver Factory Begins...
+13:31:22.931 INFO  TRRACS -Thread Safe WebDriver Instance is Set...
+13:31:23.052 INFO  TRRACS -Successfully Launched Local:Chrome
+13:31:51.887 INFO  TRRACS -T001_openBOEClosure : Test Case Passed
+13:32:04.643 INFO  TRRACS -T002_checkAutofillToDate : Test Case Passed
+13:32:20.025 INFO  TRRACS -T002_checkAutofillToDate : Test Case Passed
+13:32:32.986 INFO  TRRACS -T003_searchByBOEnumber : Test Case Passed
+13:32:38.181 INFO  TRRACS -T004_checkAdCodeAutoDisable : Test Case Passed
+13:32:42.363 INFO  TRRACS -T005_uploadBOEFile : Test Case Passed
+13:33:02.219 INFO  TRRACS -T006_DownloadCSVFile : Test Case Passed
+13:33:47.968 INFO  TRRACS -T007_ViewBOE : Test Case Passed
+13:34:00.286 INFO  TRRACS -T008_RaiseBOEClosure : Test Case Failed
+13:34:00.822 INFO  TRRACS -BOEClosureTest : Test Ends
+13:37:47.948 INFO  TRRACS -Suite : Test Suite Begins
+13:37:47.953 INFO  TRRACS -Gathering Configuration Properties...
+13:37:47.955 INFO  TRRACS -Successfully Gathered Configuration Properties...
+13:37:48.029 INFO  TRRACS -BOEClosureTest : Test Begins
+13:37:48.030 INFO  TRRACS -Initialization Of Driver Factory Begins...
+13:37:48.030 INFO  TRRACS -BOEExtensionTest : Test Begins
+13:37:48.030 INFO  TRRACS -Initialization Of Driver Factory Begins...
+13:37:48.031 INFO  TRRACS -OrmMasterPageTest : Test Begins
+13:37:48.031 INFO  TRRACS -Initialization Of Driver Factory Begins...
+13:37:50.256 INFO  TRRACS -Thread Safe WebDriver Instance is Set...
+13:37:50.280 INFO  TRRACS -Thread Safe WebDriver Instance is Set...
+13:37:50.434 INFO  TRRACS -Successfully Launched Local:Chrome
+13:37:50.492 INFO  TRRACS -Successfully Launched Local:Chrome
+13:37:50.560 INFO  TRRACS -Thread Safe WebDriver Instance is Set...
+13:37:50.718 INFO  TRRACS -Successfully Launched Local:Chrome
+13:38:04.104 INFO  TRRACS -TC01_navigateToOrmMaster : Test Case Passed
+13:38:05.747 INFO  TRRACS -TC02_checkPresenceofElements : Test Case Passed
+13:38:13.150 INFO  TRRACS -T001_openBOEClosure : Test Case Passed
+13:38:20.253 INFO  TRRACS -T001_openBOEExtension : Test Case Passed
+13:38:21.010 INFO  TRRACS -TC03_selectDate : Test Case Passed
+13:38:21.244 INFO  TRRACS -TC04_ormReferenceNumberField : Test Case Passed
+13:38:24.856 INFO  TRRACS -TC05_adCodeField : Test Case Passed
+13:38:26.005 INFO  TRRACS -T002_checkAutofillToDate : Test Case Passed
+13:38:26.121 INFO  TRRACS -TC06_ieCodeField : Test Case Passed
+13:38:30.404 INFO  TRRACS -TC07_remittanceStatusField : Test Case Passed
+13:38:32.966 INFO  TRRACS -T002_checkAutofillToDate : Test Case Passed
+13:38:34.016 INFO  TRRACS -TC08_clickSearchButton : Test Case Passed
+13:38:36.268 INFO  TRRACS -TC09_downloadORM : Test Case Passed
+13:38:37.565 INFO  TRRACS -TC10_uploadOrmFile : Test Case Passed
+13:38:39.826 INFO  TRRACS -TC11_navigateToAddRemittance : Test Case Passed
+13:38:41.354 INFO  TRRACS -T002_checkAutofillToDate : Test Case Passed
+13:38:42.061 INFO  TRRACS -TC12_viewORMDetails : Test Case Passed
+13:38:45.510 INFO  TRRACS -T002_checkAutofillToDate : Test Case Passed
+13:38:46.601 INFO  TRRACS -TC13_editORM : Test Case Passed
+13:38:47.769 INFO  TRRACS -TC14_cancelORM : Test Case Passed
+13:38:47.801 INFO  TRRACS -OrmMasterPageTest : Test Ends
+13:38:54.142 INFO  TRRACS -T003_searchByBOEnumber : Test Case Passed
+13:38:58.198 INFO  TRRACS -T003_searchByBOEnumber : Test Case Passed
+13:38:59.290 INFO  TRRACS -T004_checkAdCodeAutoDisable : Test Case Passed
+13:39:03.419 INFO  TRRACS -T004_checkAdCodeAutoDisable : Test Case Passed
+13:39:03.484 INFO  TRRACS -T005_uploadBOEFile : Test Case Passed
+13:39:07.544 INFO  TRRACS -T005_uploadBOEFile : Test Case Passed
+13:39:25.874 INFO  TRRACS -T006_DownloadCSVFile : Test Case Passed
+13:39:39.763 INFO  TRRACS -T006_DownloadCSVFile : Test Case Passed
+13:39:51.138 INFO  TRRACS -T007_ViewBOE : Test Case Passed
+13:40:03.598 INFO  TRRACS -T007_ViewBOE : Test Case Passed
+13:40:27.755 INFO  TRRACS -T008_RaiseBOEClosure : Test Case Failed
+13:40:28.142 INFO  TRRACS -BOEClosureTest : Test Ends
+13:40:41.939 INFO  TRRACS -T008_RaiseBOEExtension : Test Case Passed
+13:40:58.886 INFO  TRRACS -T009_cancelBOEExtension : Test Case Failed
+13:40:59.400 INFO  TRRACS -BOEExtensionTest : Test Ends
+15:04:10.547 INFO  TRRACS -Suite : Test Suite Begins
+15:04:10.552 INFO  TRRACS -Gathering Configuration Properties...
+15:04:10.554 INFO  TRRACS -Successfully Gathered Configuration Properties...
+15:04:10.626 INFO  TRRACS -BOEClosureTest : Test Begins
+15:04:10.627 INFO  TRRACS -Initialization Of Driver Factory Begins...
+15:04:12.203 INFO  TRRACS -Thread Safe WebDriver Instance is Set...
+15:04:12.321 INFO  TRRACS -Successfully Launched Local:Chrome
+15:04:40.603 INFO  TRRACS -T001_openBOEClosure : Test Case Passed
+15:04:40.642 INFO  TRRACS -BOEClosureTest : Test Ends

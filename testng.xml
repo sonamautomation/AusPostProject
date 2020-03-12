@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" thread-count="5" parallel="tests">
+	<listeners>
+		<listener class-name="com.htcindia.trracs.listener.CustomListener" />
+	</listeners>
+
+	<!-- Test 
+	<test name="BOEExtensionTest">
+		<classes>
+			<class name="com.htcindia.trracs.testcases.BOEExtensionTest" />
+		</classes>
+	</test>
+	<test name="OrmMasterPageTest">
+		<classes>
+			<class name="com.htcindia.trracs.testcases.OrmMasterPageTest" />
+		</classes>
+	</test>  -->
+	<test name="BOEClosureTest">
+		<classes>
+			<class name="com.htcindia.trracs.testcases.BOEClosureTest" />
+		</classes>
+	</test>
+
+</suite> <!-- Suite -->
