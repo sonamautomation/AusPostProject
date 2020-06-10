@@ -8,6 +8,11 @@ import java.util.Date;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.ITestClass;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
@@ -18,6 +23,7 @@ import config.properties.ConfigHolder;
 import drivers.DriverFactory;
 import helpers.ExcelUtility;
 import helpers.MyException;
+import helpers.PasswordEncryptDecrypt;
 import helpers.SnapShot;
 import pages.BOEClosurePage;
 import pages.BOEExtensionPage;
@@ -28,12 +34,10 @@ import pages.OrmMasterPage;
 public class Base {
 	
 	/* <---------- Page objects ---------> */
-	protected static LoginPage loginPage;
-	protected static DashboardPage dashboard;
-	protected BOEExtensionPage boeExtension;
-	protected BOEClosurePage boeClosure;
-	protected static OrmMasterPage ormMasterPage;
+	protected LoginPage loginPage;
+	protected DashboardPage dashboard;
 
+	
 	/* <---------- Log4j Instance ---------> */
 	public static Logger Log;
 
@@ -41,8 +45,8 @@ public class Base {
 	public static ConfigHolder config;
 
 	/* <---------- Driver Instances ---------> */
-	public  DriverFactory dFactory;
-	private WebDriver webDriver;
+	protected DriverFactory dFactory;
+	protected WebDriver webDriver;
 	
 	/*<--No instance required for Excel sheet reader since all methods are static. 
 	 * Call methods with class name -->*/
@@ -52,8 +56,10 @@ public class Base {
 	public static String nameOfBrowser;
 	public static String driverFilesDirectory;
 	public static String snapShotsDirectory;
+	public static String hubURL;
+	public static String container;
 
-	public ThreadLocal<WebDriver> browser = new ThreadLocal<WebDriver>();
+	public static ThreadLocal<WebDriver> browser = new ThreadLocal<WebDriver>();
 
 	/* <---------- SnapShot Instance ---------> */
 	
@@ -83,7 +89,7 @@ public class Base {
 		Log = LogManager.getLogger(projName);
 	}
 
-	protected void gatherConfigProperties() throws MyException {
+	protected void gatherConfigProperties() throws Exception {
 		Log.info("Gathering Configuration Properties...");
 
 		/* <---------- ConfigHolder Singleton Instance ---------> */
@@ -93,21 +99,31 @@ public class Base {
 		nameOfBrowser = config.properties.get("browserName");
 		driverFilesDirectory = config.properties.get("driverFilesPath");
 		snapShotsDirectory = config.properties.get("snapShotsPath");
-
+		hubURL = config.properties.get("hubURL");
+		container =  config.properties.get("containerOn");
 		Log.info("Successfully Gathered Configuration Properties...");
+	}
+	
+	public String getHubURL(String browserType,String driverPathOrHubURL) {
+		String url = driverPathOrHubURL;
+		if(browserType.equalsIgnoreCase("REMOTE")) {
+			url = hubURL;
+		}
+		return url;
 	}
 
 	protected void trigger(String browserType, String browserName, String driverPathOrHubURL)
-			throws MalformedURLException, MyException {
+			throws MalformedURLException, MyException, InterruptedException {
 		Log.info("Initialization Of Driver Factory Begins...");
 
 		/* <---------- DriverFactory Singleton Instance ---------> */
 		dFactory = DriverFactory.getInstance();
 		/* <---------- Launch Local (Or) Remote Browser Session ---------> */
+		driverPathOrHubURL =getHubURL(browserType, driverPathOrHubURL);
 		webDriver = dFactory.getDriver(browserType, driverPathOrHubURL).launch(browserName);
 		setBrowser(webDriver);
 		getBrowser().manage().window().maximize();
-		snap.set(new SnapShot(snapShotsDirectory, getBrowser()));
+		snap.set(new SnapShot(snapShotsDirectory, getBrowser()));	
 		Log.info("Successfully Launched " + browserType + ":" + browserName);
 	}
 	
@@ -135,12 +151,13 @@ public class Base {
 	}
 	
 	private void setBrowser(WebDriver driver) {
-		browser.set(driver);
+		browser.set(driver);		
 		Log.info("Thread Safe WebDriver Instance is Set...");
 	}
 
 	public WebDriver getBrowser() {
 		return browser.get();
+		
 	}
 	
 
@@ -158,6 +175,28 @@ public class Base {
 
 	public void setTestCase(ExtentTest test) {
 		testCase.set(test);
+	}
+	
+	@BeforeTest
+	@Parameters("browser")
+	public void before_Tests(String browser) throws MyException {
+		try {
+			try {
+				try {
+					trigger(typeOfBrowser, browser, driverFilesDirectory);
+				} catch (InterruptedException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+				loginPage = new LoginPage(getBrowser());
+			} catch (MyException e) {
+				Log.error("Failed To Trigger Browser Session" + "\n" + e.getMessage());
+				e.getMessage();
+			}
+		} catch (MalformedURLException e){
+			Log.error("Failed To Trigger Browser Session" + "\n" + e.getMessage());
+			e.getMessage();
+		}	
 	}
 
 }
