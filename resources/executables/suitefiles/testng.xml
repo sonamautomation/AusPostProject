@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="TRRACS">
+<suite name="CT">
 	<listeners>
 		<listener
-			class-name="com.htcindia.trracs.listener.MyListener" />
+			class-name="listener.CustomListener" />
 	</listeners>
 
-	<test name="Import Module" >
+	<test name="API">
+		<parameter name="browser" value="Chrome"/>
 		<classes>
-			<class name="com.htcindia.trracs.testcases.BOEExtensionTest"/>
+			<class name="testcases.APITest"/>
 		</classes>
 	</test>
 </suite>

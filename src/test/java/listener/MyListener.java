@@ -2,8 +2,10 @@ package listener;
 
 import java.net.MalformedURLException;
 
+import org.testng.IClass;
 import org.testng.ISuite;
 import org.testng.ISuiteListener;
+import org.testng.ITestClass;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
@@ -12,14 +14,19 @@ import org.testng.annotations.AfterMethod;
 import base.Base;
 import helpers.MyException;
 
-public class MyListener extends Base implements ITestListener, ISuiteListener {
+public class MyListener extends Base implements ITestListener, ISuiteListener{
 	
 	/* <---------- Once Test Execution Begins ---------> */
 	@Override
 	public void onTestStart(ITestResult testResult) {
 		Log.info(getTestMethodName(testResult) + " : Test Case Execution Begins");
 		try {
-			trigger(typeOfBrowser, nameOfBrowser, driverFilesDirectory);
+			try {
+				trigger(typeOfBrowser, nameOfBrowser, driverFilesDirectory);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		} catch (MalformedURLException e) {
 			Log.error("Failed To Trigger Browser Session" + "\n" + e.getMessage());
 			e.getMessage();
@@ -57,8 +64,13 @@ public class MyListener extends Base implements ITestListener, ISuiteListener {
 		setLog4j("TRRACS");
 		Log.info(suite.getName() + " : Test Suite Begins");
 		try {
-			gatherConfigProperties();
-		} catch (MyException e) {
+			try {
+				gatherConfigProperties();
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		} catch (Exception e) {
 			Log.error("Failed To Gather Config Properties" + "\n" + e.getMessage());
 			e.printStackTrace();
 		}
@@ -99,6 +111,8 @@ public class MyListener extends Base implements ITestListener, ISuiteListener {
 		// TODO Auto-generated method stub
 		
 	}
+	
+
 	
 	
 

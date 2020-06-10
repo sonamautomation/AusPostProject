@@ -7,6 +7,7 @@ import java.net.MalformedURLException;
 import java.nio.file.Path;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.remote.BrowserType;
 import org.testng.ISuite;
 import org.testng.ISuiteListener;
 import org.testng.ITestClass;
@@ -35,12 +36,16 @@ public class CustomListener extends Base implements ITestListener, ISuiteListene
 
 	@Override
 	public void onStart(ISuite suite) {
-		// TODO Auto-generated method stub
 		setDate();
 		setLog4j("TRRACS");
 		Log.info(suite.getName() + " : Test Suite Begins");
 		try {
-			gatherConfigProperties();
+			try {
+				gatherConfigProperties();
+			    startGrid(typeOfBrowser);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
 			initializeTestReport();
 		} catch (MyException e) {
 			Log.error("Failed To Gather Config Properties" + "\n" + e.getMessage());
@@ -50,26 +55,27 @@ public class CustomListener extends Base implements ITestListener, ISuiteListene
 
 	@Override
 	public void onFinish(ISuite suite) {
-		// TODO Auto-generated method stub
-		// getBrowser().quit();
+		try {
+			stopGrid(typeOfBrowser);
+		} catch (IOException e) {
+			e.printStackTrace();
+		} 
+		 
 	}
 
 	@Override
 	public void onTestStart(ITestResult result) {
 		// TODO Auto-generated method stub
-
 	}
 
 	@Override
 	public void onTestSuccess(ITestResult testResult) {
 		Log.info(getTestMethodName(testResult) + " : Test Case Passed");
-		// getBrowser().quit();
-			getTestCase().log(Status.PASS, MarkupHelper.createLabel(testResult.getName()+" PASSED ", ExtentColor.GREEN).getMarkup());
+		getTestCase().log(Status.PASS, MarkupHelper.createLabel(testResult.getName()+" PASSED ", ExtentColor.GREEN).getMarkup());
 	}
 
 	@Override
 	public void onTestFailure(ITestResult testResult) {
-		// TODO Auto-generated method stub
 		Log.info(getTestMethodName(testResult) + " : Test Case Failed");
 		try {
 			getTestCase().log(Status.FAIL, MarkupHelper.createLabel(testResult.getName()+" FAILED ", ExtentColor.RED).getMarkup(), MediaEntityBuilder.createScreenCaptureFromPath(new File(snap.get().saveAs(testResult.getName() + ".png")).getAbsolutePath()).build());
@@ -77,23 +83,18 @@ public class CustomListener extends Base implements ITestListener, ISuiteListene
 			// TODO Auto-generated catch block
 			e1.getMessage();
 		}
-		// getBrowser().quit();
 	}
 
 	@Override
 	public void onTestSkipped(ITestResult testResult) {
-		// TODO Auto-generated method stub
 		Log.info(getTestMethodName(testResult) + " : Test Case Skipped");
 		try {
 			getTestCase().log(Status.SKIP, MarkupHelper.createLabel(testResult.getName()+" FAILED ", ExtentColor.LIME).getMarkup(), MediaEntityBuilder.createScreenCaptureFromPath(new File(snap.get().saveAs(testResult.getName() + ".png")).getAbsolutePath()).build());
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (MyException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		// getBrowser().quit();
 	}
 
 	@Override
@@ -101,51 +102,61 @@ public class CustomListener extends Base implements ITestListener, ISuiteListene
 		// TODO Auto-generated method stub
 
 	}
+	
 
 	@Override
 	public void onStart(ITestContext context) {
-		// TODO Auto-generated method stub
 		Log.info(context.getName() + " : Test Begins");
-		try {
-			try {
-				trigger(typeOfBrowser, nameOfBrowser, driverFilesDirectory);
-				getBrowser().get("http://172.16.104.66:8080/trracs/faces/pages/login.xhtml");
-				 setParentTestCase(extentReport.createTest(context.getCurrentXmlTest().getName()));
-				try {
-					Thread.sleep(3000);
-				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-				loginPage = new LoginPage(getBrowser());
-				System.out.println(loginPage);
-			} catch (MyException e) {
-				Log.error("Failed To Trigger Browser Session" + "\n" + e.getMessage());
-				e.getMessage();
-			}
-		} catch (MalformedURLException e) {
-			Log.error("Failed To Trigger Browser Session" + "\n" + e.getMessage());
-			e.getMessage();
-		}
+		setParentTestCase(extentReport.createTest(context.getCurrentXmlTest().getName()));
 	}
 
 	@Override
 	public void onFinish(ITestContext context) {
-		// TODO Auto-generated method stub
 		Log.info(context.getName() + " : Test Ends");
 		getBrowser().quit();
 		extentReport.flush();
 	}
-	
-	
+
+
 	@AfterMethod
 	public void after_each_test_case(ITestResult result) {
 		Log.info(result.getMethod().getMethodName() + " : Test Case Ends");
-		// getBrowser().quit();
 	}
-
+	
 	private static String getTestMethodName(ITestResult testResult) {
 		return testResult.getMethod().getConstructorOrMethod().getName();
+	}
+
+	public void startGrid(String browserType) {
+		if(browserType.equalsIgnoreCase("REMOTE") && container.equalsIgnoreCase("true")) {
+			try {
+				Runtime.getRuntime().exec("cmd /c start StartGrid.bat");
+				try {
+					Thread.sleep(15000);
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
+			} catch (IOException e1) {
+				e1.printStackTrace();
+			}
+		}
+	}
+
+	public void stopGrid(String browserType) throws IOException {
+		if(browserType.equalsIgnoreCase("REMOTE") && container.equalsIgnoreCase("true")) {
+			try {
+				Thread.sleep(5000);
+			} catch (InterruptedException e1) {
+				e1.printStackTrace();
+			}
+			Runtime.getRuntime().exec("cmd /c start StopGrid.bat");
+			try {
+				Thread.sleep(5000);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+			Runtime.getRuntime().exec("taskkill /f /im cmd.exe");
+		}
 	}
 
 }

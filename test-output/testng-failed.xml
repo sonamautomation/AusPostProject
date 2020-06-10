@@ -1,25 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite]" parallel="tests">
+<suite name="Failed suite [CTPattern]" parallel="tests">
   <listeners>
-    <listener class-name="com.htcindia.trracs.listener.CustomListener"/>
+    <listener class-name="listener.CustomListener"/>
   </listeners>
-  <test name="BOEClosureTest(failed)" parallel="tests">
+  <test name="Sample1(failed)" parallel="tests">
     <classes>
-      <class name="com.htcindia.trracs.testcases.BOEClosureTest">
+      <class name="testcases.CTSSampleTest2">
         <methods>
-          <include name="T008_RaiseBOEClosure" invocation-numbers="0"/>
+          <include name="before_Tests"/>
+          <include name="after_each_test_case"/>
         </methods>
-      </class> <!-- com.htcindia.trracs.testcases.BOEClosureTest -->
-    </classes>
-  </test> <!-- BOEClosureTest(failed) -->
-  <test name="BOEExtensionTest(failed)" parallel="tests">
-    <classes>
-      <class name="com.htcindia.trracs.testcases.BOEExtensionTest">
+      </class> <!-- testcases.CTSSampleTest2 -->
+      <class name="testcases.CTSSampleTest">
         <methods>
-          <include name="T009_cancelBOEExtension" invocation-numbers="0"/>
+          <include name="before_Tests"/>
+          <include name="testNavigateToRevIT1" invocation-numbers="0"/>
+          <include name="testNavigateToRevIT" invocation-numbers="0"/>
         </methods>
-      </class> <!-- com.htcindia.trracs.testcases.BOEExtensionTest -->
+      </class> <!-- testcases.CTSSampleTest -->
     </classes>
-  </test> <!-- BOEExtensionTest(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Sample1(failed) -->
+</suite> <!-- Failed suite [CTPattern] -->

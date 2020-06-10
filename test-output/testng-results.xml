@@ -1,29 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="29996" started-at="2020-02-19T09:34:10Z" finished-at="2020-02-19T09:34:40Z">
+  <suite name="CT" duration-ms="45208" started-at="2020-06-10T07:50:04Z" finished-at="2020-06-10T07:50:50Z">
     <groups>
     </groups>
-    <test name="BOEClosureTest" duration-ms="29996" started-at="2020-02-19T09:34:10Z" finished-at="2020-02-19T09:34:40Z">
-      <class name="com.htcindia.trracs.testcases.BOEClosureTest">
-        <test-method status="PASS" signature="T001_openBOEClosure(java.util.Map, java.lang.reflect.Method)[pri:0, instance:com.htcindia.trracs.testcases.BOEClosureTest@5442a311]" name="T001_openBOEClosure" duration-ms="12997" started-at="2020-02-19T15:04:27Z" data-provider="BOEClosureTestData" finished-at="2020-02-19T15:04:40Z">
+    <test name="API" duration-ms="45208" started-at="2020-06-10T07:50:04Z" finished-at="2020-06-10T07:50:50Z">
+      <class name="testcases.CTSSampleTest">
+        <test-method status="PASS" signature="before_Tests(java.lang.String)[pri:0, instance:testcases.CTSSampleTest@6107227e]" name="before_Tests" is-config="true" duration-ms="5603" started-at="2020-06-10T17:50:04Z" finished-at="2020-06-10T17:50:10Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{password=123Welcome*, type=import, username=test_bob5}]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[public void com.htcindia.trracs.testcases.BOEClosureTest.T001_openBOEClosure(java.util.Map,java.lang.reflect.Method)]]>
+                <![CDATA[Chrome]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- T001_openBOEClosure -->
-      </class> <!-- com.htcindia.trracs.testcases.BOEClosureTest -->
-    </test> <!-- BOEClosureTest -->
-  </suite> <!-- Suite -->
+        </test-method> <!-- before_Tests -->
+        <test-method status="PASS" signature="testNavigateToRevIT(java.util.Map, java.lang.reflect.Method)[pri:0, instance:testcases.CTSSampleTest@6107227e]" name="testNavigateToRevIT" duration-ms="19422" started-at="2020-06-10T17:50:11Z" data-provider="CTTestData" finished-at="2020-06-10T17:50:30Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{TemplateId=1}]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void testcases.CTSSampleTest.testNavigateToRevIT(java.util.Map,java.lang.reflect.Method) throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNavigateToRevIT -->
+        <test-method status="PASS" signature="testNavigateToRevIT1(java.util.Map, java.lang.reflect.Method)[pri:0, instance:testcases.CTSSampleTest@6107227e]" name="testNavigateToRevIT1" duration-ms="19659" started-at="2020-06-10T17:50:30Z" data-provider="CTTestData" finished-at="2020-06-10T17:50:50Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{TemplateId=1}]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[public void testcases.CTSSampleTest.testNavigateToRevIT1(java.util.Map,java.lang.reflect.Method) throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNavigateToRevIT1 -->
+      </class> <!-- testcases.CTSSampleTest -->
+    </test> <!-- API -->
+  </suite> <!-- CT -->
 </testng-results>
