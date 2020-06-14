@@ -8,6 +8,8 @@ public class Constants {
 	/* <---------- Property Details ---------> */
 	public static final String CONFIG_FILE_PATH = "./resources/configurations/config/";
 	public static final String CONFIG_FILE_NAME = "config.properties";
+	public static final String CONFIG_APIFILE_NAME = "api.properties";
+	public static final String CONFIG_TIBCOFILE_NAME = "Tibco.properties";
 
 	/* <---------- Driver Properties ---------> */
 	public static final String CHROME_DRIVER_PROPERTY = "webdriver.chrome.driver";

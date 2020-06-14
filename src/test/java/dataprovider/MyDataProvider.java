@@ -40,4 +40,13 @@ public class MyDataProvider extends Base {
 		testDataArray = ExcelUtility.getTestData(method.getName());
 		return testDataArray;
 	}
+
+	@DataProvider(name = "APITestData")
+	public static Object[][] dataProviderMethod4 (Method method) throws Exception {
+		Object[][] testDataArray = null;
+		ExcelUtility.setExcelFile(config.properties.get("testDataFilesPath") + config.properties.get("testDataFile"),"API");
+		/* Test method name and value in test data should be same(value highlighted) */
+		testDataArray = ExcelUtility.getTestData(method.getName());
+		return testDataArray;
+	}
 }

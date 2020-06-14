@@ -1,11 +1,10 @@
 package config.properties;
 
-import static constants.Constants.*;
-
 import java.util.HashMap;
 import java.util.Map;
 
 import helpers.MyException;
+import static constants.Constants.*;
 
 public class ConfigHolder {
 
@@ -30,6 +29,10 @@ public class ConfigHolder {
 	/* <---------- Put All The Properties Inside A Map ---------> */
 	private void getAll() throws MyException {
 		ConfigLoader loader = new ConfigLoader(CONFIG_FILE_PATH, CONFIG_FILE_NAME);
+		properties.putAll(loader.getAll());
+		loader = new ConfigLoader(CONFIG_FILE_PATH, CONFIG_APIFILE_NAME);
+		properties.putAll(loader.getAll());
+		loader = new ConfigLoader(CONFIG_FILE_PATH, CONFIG_TIBCOFILE_NAME);
 		properties.putAll(loader.getAll());
 	}
 

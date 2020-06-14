@@ -23,7 +23,10 @@ import config.properties.ConfigHolder;
 import drivers.DriverFactory;
 import helpers.ExcelUtility;
 import helpers.MyException;
+import helpers.PasswordEncryptDecrypt;
 import helpers.SnapShot;
+import messageObjects.MessageConstruct;
+import messageObjects.MessageFactory;
 import pages.BOEClosurePage;
 import pages.BOEExtensionPage;
 import pages.DashboardPage;
@@ -31,12 +34,16 @@ import pages.LoginPage;
 import pages.OrmMasterPage;
 
 public class Base {
-	
+
 	/* <---------- Page objects ---------> */
 	protected LoginPage loginPage;
 	protected DashboardPage dashboard;
 
-	
+
+	/* <---------- Message objects ---------> */
+	protected static MessageFactory messageFactory;
+	protected static MessageConstruct messageConstruct;
+
 	/* <---------- Log4j Instance ---------> */
 	public static Logger Log;
 
@@ -46,7 +53,7 @@ public class Base {
 	/* <---------- Driver Instances ---------> */
 	protected DriverFactory dFactory;
 	protected WebDriver webDriver;
-	
+
 	/*<--No instance required for Excel sheet reader since all methods are static. 
 	 * Call methods with class name -->*/
 
@@ -57,24 +64,36 @@ public class Base {
 	public static String snapShotsDirectory;
 	public static String hubURL;
 	public static String container;
+	public static String hostUserName;
+	public static String hostPassword;
+	public static String encryptPswd;
+	public static String uri;
+	public static String xmlUri;
+	public static String[] header;
+	public static String headerKey;
+	public static String headerValue;
+	public static Boolean runApi;
+	public static String encodedAuth;
+	public static String tibcoUserId, tibcoPassword, tibcoQueue, tibcoURL;
 
 	public static ThreadLocal<WebDriver> browser = new ThreadLocal<WebDriver>();
 
+
 	/* <---------- SnapShot Instance ---------> */
-	
+
 	public static ThreadLocal<SnapShot> snap=new ThreadLocal<SnapShot>();
-	
+
 	/* <---------- ExcelUtility Instance ---------> */
 	public static ExcelUtility excelReader;
 
 	/* <---------- Extent report Instance ---------> */
 	private static String customValue;
 	protected ExtentHtmlReporter htmlReporter;
-	
+
 	protected static  ExtentReports extentReport ;
 	protected static ThreadLocal<ExtentTest> parentTestCase = new ThreadLocal<>();
 	protected static ThreadLocal<ExtentTest> testCase = new ThreadLocal<>();
-	
+
 	File file;
 
 	/* <---------- Set Current Date ---------> */
@@ -89,6 +108,7 @@ public class Base {
 	}
 
 	protected void gatherConfigProperties() throws Exception {
+		PasswordEncryptDecrypt passwordEncryptDecrypt= new PasswordEncryptDecrypt();
 		Log.info("Gathering Configuration Properties...");
 
 		/* <---------- ConfigHolder Singleton Instance ---------> */
@@ -100,9 +120,23 @@ public class Base {
 		snapShotsDirectory = config.properties.get("snapShotsPath");
 		hubURL = config.properties.get("hubURL");
 		container =  config.properties.get("containerOn");
+		hostUserName = config.properties.get("hostUserName");
+		encryptPswd = config.properties.get("hostPassword");
+		hostPassword = passwordEncryptDecrypt.decrypt(encryptPswd);
+		uri = config.properties.get("hostURI");
+		xmlUri = config.properties.get("xmlHostURI");
+		encodedAuth = config.properties.get("encodedAuth");
+		header =  config.properties.get("hostHeader").split(":");
+		headerKey = header[0];
+		headerValue = header[1];
+		runApi=Boolean.valueOf(config.properties.get("runApiTests"));
+		tibcoUserId=config.properties.get("PUB_USER_ID"); 
+		tibcoPassword=config.properties.get("PUB_PASS"); 
+		tibcoQueue=config.properties.get("TIBCO_QUEUE_NAME");
+		tibcoURL=config.properties.get("TIBCO_URL");
 		Log.info("Successfully Gathered Configuration Properties...");
 	}
-	
+
 	public String getHubURL(String browserType,String driverPathOrHubURL) {
 		String url = driverPathOrHubURL;
 		if(browserType.equalsIgnoreCase("REMOTE")) {
@@ -125,20 +159,20 @@ public class Base {
 		snap.set(new SnapShot(snapShotsDirectory, getBrowser()));	
 		Log.info("Successfully Launched " + browserType + ":" + browserName);
 	}
-	
+
 	protected void initializeTestReport() throws MyException {
-		
+
 		customValue=config.properties.get("reportName") + "_" + getdate();
 		/* <---------- Creating extent report in specified location ---------> */
 		htmlReporter = new ExtentHtmlReporter(config.properties.get("reportPath")
 				+ customValue + ".html");
 		htmlReporter.config().setReportName(config.properties.get("reportDocumentName"));
 		htmlReporter.config().setTheme(Theme.DARK);
-		
+
 		extentReport = new ExtentReports();
 		extentReport.attachReporter(htmlReporter);
 	}
-	
+
 	public String getProjectPath() {
 		return System.getProperty("user.dir");
 	}
@@ -148,7 +182,7 @@ public class Base {
 		String dateName = new SimpleDateFormat("ddMMyyyy-HH.mm.ss").format(new Date());
 		return dateName;
 	}
-	
+
 	private void setBrowser(WebDriver driver) {
 		browser.set(driver);		
 		Log.info("Thread Safe WebDriver Instance is Set...");
@@ -156,9 +190,9 @@ public class Base {
 
 	public WebDriver getBrowser() {
 		return browser.get();
-		
+
 	}
-	
+
 
 	public ExtentTest getParentTestCase() {
 		return parentTestCase.get();
@@ -175,22 +209,24 @@ public class Base {
 	public void setTestCase(ExtentTest test) {
 		testCase.set(test);
 	}
-	
+
 	@BeforeTest
 	@Parameters("browser")
 	public void before_Tests(String browser) throws MyException {
 		try {
-			try {
+			if(!runApi) {
 				try {
-					trigger(typeOfBrowser, browser, driverFilesDirectory);
-				} catch (InterruptedException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
+					try {
+						trigger(typeOfBrowser, browser, driverFilesDirectory);
+					} catch (InterruptedException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
+					loginPage = new LoginPage(getBrowser());
+				} catch (MyException e) {
+					Log.error("Failed To Trigger Browser Session" + "\n" + e.getMessage());
+					e.getMessage();
 				}
-				loginPage = new LoginPage(getBrowser());
-			} catch (MyException e) {
-				Log.error("Failed To Trigger Browser Session" + "\n" + e.getMessage());
-				e.getMessage();
 			}
 		} catch (MalformedURLException e){
 			Log.error("Failed To Trigger Browser Session" + "\n" + e.getMessage());

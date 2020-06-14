@@ -23,7 +23,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 5 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -36,8 +36,8 @@
       <div class="suite">
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
-            <a href="#" class="navigator-link" panel-name="suite-CT">
-              <span class="suite-name border-passed">CT</span>
+            <a href="#" class="navigator-link" panel-name="suite-API">
+              <span class="suite-name border-failed">API</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -47,37 +47,37 @@
             <div class="suite-section-content">
               <ul>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="test-xml-CT">
-                    <span>C:\Users\DivyaS\Selenium-accelerator\auspost-javatestautomation\resources\executables\suitefiles\testng.xml</span>
+                  <a href="#" class="navigator-link " panel-name="test-xml-API">
+                    <span>F:\ReviIt\selenium-accelarator\auspost-javatestautomation\resources\executables\suitefiles\testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="testlist-CT">
+                  <a href="#" class="navigator-link " panel-name="testlist-API">
                     <span class="test-stats">1 test</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="group-CT">
+                  <a href="#" class="navigator-link " panel-name="group-API">
                     <span>0 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="times-CT">
+                  <a href="#" class="navigator-link " panel-name="times-API">
                     <span>Times</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="reporter-CT">
+                  <a href="#" class="navigator-link " panel-name="reporter-API">
                     <span>Reporter output</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="ignored-methods-CT">
+                  <a href="#" class="navigator-link " panel-name="ignored-methods-API">
                     <span>Ignored methods</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="chronological-CT">
+                  <a href="#" class="navigator-link " panel-name="chronological-API">
                     <span>Chronological view</span>
                   </a> <!-- navigator-link  -->
                 </li>
@@ -90,26 +90,41 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">5 methods, 5 failed,   </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-CT" class="hide-methods passed suite-CT"> (hide)</a> <!-- hide-methods passed suite-CT -->
-                      <a href="#" panel-name="suite-CT" class="show-methods passed suite-CT"> (show)</a> <!-- show-methods passed suite-CT -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-API" class="hide-methods failed suite-API"> (hide)</a> <!-- hide-methods failed suite-API -->
+                      <a href="#" panel-name="suite-API" class="show-methods failed suite-API"> (show)</a> <!-- show-methods failed suite-API -->
                     </span>
-                    <div class="method-list-content passed suite-CT">
+                    <div class="method-list-content failed suite-API">
                       <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-CT" title="testcases.CTSSampleTest" hash-for-method="testNavigateToRevIT({TemplateId=1}, public void testcases.CTSSampleTest.testNavigateToRevIT(java.util.Map,java.lang.refl...)">testNavigateToRevIT({TemplateId=1}, public void testcases.CTSSampleTest.testNavigateToRevIT(java.util.Map,java.lang.refl...)</a> <!-- method navigator-link -->
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-API" title="testcases.APITest" hash-for-method="testAPIWithJsonRequest({productID=1234585, requestType=POST, response=202, jsonPath=article/product/sub_product_id, type=JS...)">testAPIWithJsonRequest({productID=1234585, requestType=POST, response=202, jsonPath=article/product/sub_product_id, type=JS...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-CT" title="testcases.CTSSampleTest" hash-for-method="testNavigateToRevIT1({TemplateId=1}, public void testcases.CTSSampleTest.testNavigateToRevIT1(java.util.Map,java.lang.ref...)">testNavigateToRevIT1({TemplateId=1}, public void testcases.CTSSampleTest.testNavigateToRevIT1(java.util.Map,java.lang.ref...)</a> <!-- method navigator-link -->
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-API" title="testcases.APITest" hash-for-method="testAPIWithJsonRequest({productID=5432179, requestType=POST, response=202, jsonPath=article/product/sub_product_id, type=JS...)">testAPIWithJsonRequest({productID=5432179, requestType=POST, response=202, jsonPath=article/product/sub_product_id, type=JS...)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-CT -->
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-API" title="testcases.APITest" hash-for-method="testAPIWithXMLRequest({requestType=POST, response=200, type=XML, TemplateId=2, ev:EventType=AFP-ER20}, public void testcas...)">testAPIWithXMLRequest({requestType=POST, response=200, type=XML, TemplateId=2, ev:EventType=AFP-ER20}, public void testcas...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-API" title="testcases.APITest" hash-for-method="testAPIWithXMLRequest({requestType=POST, response=200, type=XML, TemplateId=2, ev:EventType=AFP-ER45}, public void testcas...)">testAPIWithXMLRequest({requestType=POST, response=200, type=XML, TemplateId=2, ev:EventType=AFP-ER45}, public void testcas...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-API" title="testcases.APITest" hash-for-method="testAPIWithXMLRequest({requestType=POST, response=200, type=XML, TemplateId=2, ev:EventType=AFP-ER30}, public void testcas...)">testAPIWithXMLRequest({requestType=POST, response=200, type=XML, TemplateId=2, ev:EventType=AFP-ER30}, public void testcas...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-API -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -120,138 +135,287 @@
     </div> <!-- navigator-root -->
     <div class="wrapper">
       <div class="main-panel-root">
-        <div panel-name="suite-CT" class="panel CT">
-          <div class="suite-CT-class-passed">
+        <div panel-name="suite-API" class="panel API">
+          <div class="suite-API-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">testcases.CTSSampleTest</span>
+              <img src="failed.png"/>
+              <span class="class-name">testcases.APITest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testNavigateToRevIT({TemplateId=1}, public void testcases.CTSSampleTest.testNavigateToRevIT(java.util.Map,java.lang.refl...)">
-                  </a> <!-- testNavigateToRevIT({TemplateId=1}, public void testcases.CTSSampleTest.testNavigateToRevIT(java.util.Map,java.lang.refl...) -->
-                  <span class="method-name">testNavigateToRevIT</span>
-                  <span class="parameters">({TemplateId=1}, public void testcases.CTSSampleTest.testNavigateToRevIT(java.util.Map,java.lang.reflect.Method) throws java.lang.Exception)</span>
+                  <a name="testAPIWithJsonRequest({productID=1234585, requestType=POST, response=202, jsonPath=article/product/sub_product_id, type=JS...)">
+                  </a> <!-- testAPIWithJsonRequest({productID=1234585, requestType=POST, response=202, jsonPath=article/product/sub_product_id, type=JS...) -->
+                  <span class="method-name">testAPIWithJsonRequest</span>
+                  <span class="parameters">({productID=1234585, requestType=POST, response=202, jsonPath=article/product/sub_product_id, type=JSON, TemplateId=1}, public void testcases.APITest.testAPIWithJsonRequest(java.util.Map,java.lang.reflect.Method) throws java.lang.Exception)</span>
+                  <div class="stack-trace">java.lang.IllegalArgumentException: password cannot be null
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:59)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:237)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:249)
+	at io.restassured.internal.common.assertion.AssertParameter.notNull(AssertParameter.groovy:26)
+	at io.restassured.internal.common.assertion.AssertParameter$notNull.callStatic(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallStatic(CallSiteArray.java:55)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callStatic(AbstractCallSite.java:196)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callStatic(AbstractCallSite.java:216)
+	at io.restassured.internal.AuthenticationSpecificationImpl.basic(AuthenticationSpecificationImpl.groovy:47)
+	at messageObjects.MessageFactory.getResponse(MessageFactory.java:34)
+	at testcases.APITest.testAPIWithJsonRequest(APITest.java:41)
+... Removed 30 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="testNavigateToRevIT1({TemplateId=1}, public void testcases.CTSSampleTest.testNavigateToRevIT1(java.util.Map,java.lang.ref...)">
-                  </a> <!-- testNavigateToRevIT1({TemplateId=1}, public void testcases.CTSSampleTest.testNavigateToRevIT1(java.util.Map,java.lang.ref...) -->
-                  <span class="method-name">testNavigateToRevIT1</span>
-                  <span class="parameters">({TemplateId=1}, public void testcases.CTSSampleTest.testNavigateToRevIT1(java.util.Map,java.lang.reflect.Method) throws java.lang.Exception)</span>
+                  <a name="testAPIWithJsonRequest({productID=5432179, requestType=POST, response=202, jsonPath=article/product/sub_product_id, type=JS...)">
+                  </a> <!-- testAPIWithJsonRequest({productID=5432179, requestType=POST, response=202, jsonPath=article/product/sub_product_id, type=JS...) -->
+                  <span class="method-name">testAPIWithJsonRequest</span>
+                  <span class="parameters">({productID=5432179, requestType=POST, response=202, jsonPath=article/product/sub_product_id, type=JSON, TemplateId=3}, public void testcases.APITest.testAPIWithJsonRequest(java.util.Map,java.lang.reflect.Method) throws java.lang.Exception)</span>
+                  <div class="stack-trace">java.lang.IllegalArgumentException: password cannot be null
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:249)
+	at io.restassured.internal.common.assertion.AssertParameter.notNull(AssertParameter.groovy:26)
+	at io.restassured.internal.common.assertion.AssertParameter$notNull.callStatic(Unknown Source)
+	at io.restassured.internal.AuthenticationSpecificationImpl.basic(AuthenticationSpecificationImpl.groovy:47)
+	at messageObjects.MessageFactory.getResponse(MessageFactory.java:34)
+	at testcases.APITest.testAPIWithJsonRequest(APITest.java:41)
+... Removed 30 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testAPIWithXMLRequest({requestType=POST, response=200, type=XML, TemplateId=2, ev:EventType=AFP-ER20}, public void testcas...)">
+                  </a> <!-- testAPIWithXMLRequest({requestType=POST, response=200, type=XML, TemplateId=2, ev:EventType=AFP-ER20}, public void testcas...) -->
+                  <span class="method-name">testAPIWithXMLRequest</span>
+                  <span class="parameters">({requestType=POST, response=200, type=XML, TemplateId=2, ev:EventType=AFP-ER20}, public void testcases.APITest.testAPIWithXMLRequest(java.util.Map,java.lang.reflect.Method) throws java.lang.Exception)</span>
+                  <div class="stack-trace">java.net.UnknownHostException: hxaix15.corptest.aptest.local
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at sun.net.NetworkClient.doConnect(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.&lt;init&gt;(Unknown Source)
+	at sun.net.www.http.HttpClient.New(Unknown Source)
+	at sun.net.www.http.HttpClient.New(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream(Unknown Source)
+	at messageObjects.MessageFactory.getSOAPResponse(MessageFactory.java:80)
+	at messageObjects.MessageFactory.getResponse(MessageFactory.java:40)
+	at testcases.APITest.testAPIWithXMLRequest(APITest.java:76)
+... Removed 24 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testAPIWithXMLRequest({requestType=POST, response=200, type=XML, TemplateId=2, ev:EventType=AFP-ER45}, public void testcas...)">
+                  </a> <!-- testAPIWithXMLRequest({requestType=POST, response=200, type=XML, TemplateId=2, ev:EventType=AFP-ER45}, public void testcas...) -->
+                  <span class="method-name">testAPIWithXMLRequest</span>
+                  <span class="parameters">({requestType=POST, response=200, type=XML, TemplateId=2, ev:EventType=AFP-ER45}, public void testcases.APITest.testAPIWithXMLRequest(java.util.Map,java.lang.reflect.Method) throws java.lang.Exception)</span>
+                  <div class="stack-trace">java.net.UnknownHostException: hxaix15.corptest.aptest.local
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at sun.net.NetworkClient.doConnect(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.&lt;init&gt;(Unknown Source)
+	at sun.net.www.http.HttpClient.New(Unknown Source)
+	at sun.net.www.http.HttpClient.New(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream(Unknown Source)
+	at messageObjects.MessageFactory.getSOAPResponse(MessageFactory.java:80)
+	at messageObjects.MessageFactory.getResponse(MessageFactory.java:40)
+	at testcases.APITest.testAPIWithXMLRequest(APITest.java:76)
+... Removed 24 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testAPIWithXMLRequest({requestType=POST, response=200, type=XML, TemplateId=2, ev:EventType=AFP-ER30}, public void testcas...)">
+                  </a> <!-- testAPIWithXMLRequest({requestType=POST, response=200, type=XML, TemplateId=2, ev:EventType=AFP-ER30}, public void testcas...) -->
+                  <span class="method-name">testAPIWithXMLRequest</span>
+                  <span class="parameters">({requestType=POST, response=200, type=XML, TemplateId=2, ev:EventType=AFP-ER30}, public void testcases.APITest.testAPIWithXMLRequest(java.util.Map,java.lang.reflect.Method) throws java.lang.Exception)</span>
+                  <div class="stack-trace">java.net.UnknownHostException: hxaix15.corptest.aptest.local
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at sun.net.NetworkClient.doConnect(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.openServer(Unknown Source)
+	at sun.net.www.http.HttpClient.&lt;init&gt;(Unknown Source)
+	at sun.net.www.http.HttpClient.New(Unknown Source)
+	at sun.net.www.http.HttpClient.New(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.connect(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream(Unknown Source)
+	at messageObjects.MessageFactory.getSOAPResponse(MessageFactory.java:80)
+	at messageObjects.MessageFactory.getResponse(MessageFactory.java:40)
+	at testcases.APITest.testAPIWithXMLRequest(APITest.java:76)
+... Removed 24 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-CT-class-passed -->
-        </div> <!-- panel CT -->
-        <div panel-name="test-xml-CT" class="panel">
+          </div> <!-- suite-API-class-failed -->
+        </div> <!-- panel API -->
+        <div panel-name="test-xml-API" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\DivyaS\Selenium-accelerator\auspost-javatestautomation\resources\executables\suitefiles\testng.xml</span>
+            <span class="header-content">F:\ReviIt\selenium-accelarator\auspost-javatestautomation\resources\executables\suitefiles\testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite name=&quot;CT&quot; parallel=&quot;none&quot;&gt;
+&lt;suite name=&quot;API&quot; parallel=&quot;none&quot;&gt;
   &lt;listeners&gt;
     &lt;listener class-name=&quot;listener.CustomListener&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test name=&quot;API&quot;&gt;
+  &lt;test name=&quot;BOEClosureTest&quot;&gt;
     &lt;parameter name=&quot;browser&quot; value=&quot;Chrome&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;testcases.CTSSampleTest&quot;/&gt;
+      &lt;class name=&quot;testcases.APITest&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- API --&gt;
-&lt;/suite&gt; &lt;!-- CT --&gt;
+  &lt;/test&gt; &lt;!-- BOEClosureTest --&gt;
+&lt;/suite&gt; &lt;!-- API --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="testlist-CT" class="panel">
+        <div panel-name="testlist-API" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Tests for CT</span>
+            <span class="header-content">Tests for API</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">API (1 class)</span>
+                <span class="test-name">BOEClosureTest (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="group-CT" class="panel">
+        <div panel-name="group-API" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Groups for CT</span>
+            <span class="header-content">Groups for API</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="times-CT" class="panel">
+        <div panel-name="times-API" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Times for CT</span>
+            <span class="header-content">Times for API</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="times-div">
               <script type="text/javascript">
-suiteTableInitFunctions.push('tableData_CT');
-function tableData_CT() {
+suiteTableInitFunctions.push('tableData_API');
+function tableData_API() {
 var data = new google.visualization.DataTable();
 data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(5);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testNavigateToRevIT1')
-data.setCell(0, 2, 'testcases.CTSSampleTest')
-data.setCell(0, 3, 19659);
+data.setCell(0, 1, 'testAPIWithJsonRequest')
+data.setCell(0, 2, 'testcases.APITest')
+data.setCell(0, 3, 1592);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'testNavigateToRevIT')
-data.setCell(1, 2, 'testcases.CTSSampleTest')
-data.setCell(1, 3, 19422);
-window.suiteTableData['CT']= { tableData: data, tableDiv: 'times-div-CT'}
+data.setCell(1, 1, 'testAPIWithXMLRequest')
+data.setCell(1, 2, 'testcases.APITest')
+data.setCell(1, 3, 256);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'testAPIWithJsonRequest')
+data.setCell(2, 2, 'testcases.APITest')
+data.setCell(2, 3, 191);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'testAPIWithXMLRequest')
+data.setCell(3, 2, 'testcases.APITest')
+data.setCell(3, 3, 154);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'testAPIWithXMLRequest')
+data.setCell(4, 2, 'testcases.APITest')
+data.setCell(4, 3, 75);
+window.suiteTableData['API']= { tableData: data, tableDiv: 'times-div-API'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 39 seconds</span>
-              <div id="times-div-CT">
-              </div> <!-- times-div-CT -->
+              <span class="suite-total-time">Total running time: 2 seconds</span>
+              <div id="times-div-API">
+              </div> <!-- times-div-API -->
             </div> <!-- times-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="reporter-CT" class="panel">
+        <div panel-name="reporter-API" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Reporter output for CT</span>
+            <span class="header-content">Reporter output for API</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="ignored-methods-CT" class="panel">
+        <div panel-name="ignored-methods-API" class="panel">
           <div class="main-panel-header rounded-window-top">
             <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="chronological-CT" class="panel">
+        <div panel-name="chronological-API" class="panel">
           <div class="main-panel-header rounded-window-top">
             <span class="header-content">Methods in chronological order</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">testcases.CTSSampleTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">testcases.APITest</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">before_Tests(Chrome)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
-                <span class="method-name">testNavigateToRevIT({TemplateId=1}, public void testcases.CTSSampleTest.testNavigateToRevIT(java.util.Map,java.lang.refl...)</span>
-                <span class="method-start">6064 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testAPIWithJsonRequest({productID=1234585, requestType=POST, response=202, jsonPath=article/product/sub_product_id, type=JS...)</span>
+                <span class="method-start">1087 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">testNavigateToRevIT1({TemplateId=1}, public void testcases.CTSSampleTest.testNavigateToRevIT1(java.util.Map,java.lang.ref...)</span>
-                <span class="method-start">25540 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testAPIWithJsonRequest({productID=5432179, requestType=POST, response=202, jsonPath=article/product/sub_product_id, type=JS...)</span>
+                <span class="method-start">2687 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testAPIWithXMLRequest({requestType=POST, response=200, type=XML, TemplateId=2, ev:EventType=AFP-ER20}, public void testcas...)</span>
+                <span class="method-start">3129 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testAPIWithXMLRequest({requestType=POST, response=200, type=XML, TemplateId=2, ev:EventType=AFP-ER30}, public void testcas...)</span>
+                <span class="method-start">3405 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testAPIWithXMLRequest({requestType=POST, response=200, type=XML, TemplateId=2, ev:EventType=AFP-ER45}, public void testcas...)</span>
+                <span class="method-start">3559 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

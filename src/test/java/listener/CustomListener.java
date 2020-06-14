@@ -78,19 +78,26 @@ public class CustomListener extends Base implements ITestListener, ISuiteListene
 	public void onTestFailure(ITestResult testResult) {
 		Log.info(getTestMethodName(testResult) + " : Test Case Failed");
 		try {
-			getTestCase().log(Status.FAIL, MarkupHelper.createLabel(testResult.getName()+" FAILED ", ExtentColor.RED).getMarkup(), MediaEntityBuilder.createScreenCaptureFromPath(new File(snap.get().saveAs(testResult.getName() + ".png")).getAbsolutePath()).build());
-		} catch (IOException | MyException e1) {
-			// TODO Auto-generated catch block
-			e1.getMessage();
-		}
+			if(runApi) {
+				getTestCase().log(Status.FAIL, MarkupHelper.createLabel(testResult.getName()+" FAILED ", ExtentColor.RED).getMarkup());
+			}else {
+				getTestCase().log(Status.FAIL, MarkupHelper.createLabel(testResult.getName()+" FAILED ", ExtentColor.RED).getMarkup(), MediaEntityBuilder.createScreenCaptureFromPath(new File(snap.get().saveAs(testResult.getName() + ".png")).getAbsolutePath()).build());
+
+			}} catch (IOException | MyException e1) {
+				// TODO Auto-generated catch block
+				e1.getMessage();
+			}
 	}
 
 	@Override
 	public void onTestSkipped(ITestResult testResult) {
 		Log.info(getTestMethodName(testResult) + " : Test Case Skipped");
 		try {
+			if(runApi) {
+				getTestCase().log(Status.SKIP, MarkupHelper.createLabel(testResult.getName()+" FAILED ", ExtentColor.LIME).getMarkup());
+			}else {
 			getTestCase().log(Status.SKIP, MarkupHelper.createLabel(testResult.getName()+" FAILED ", ExtentColor.LIME).getMarkup(), MediaEntityBuilder.createScreenCaptureFromPath(new File(snap.get().saveAs(testResult.getName() + ".png")).getAbsolutePath()).build());
-		} catch (IOException e) {
+		} }catch (IOException e) {
 			e.printStackTrace();
 		} catch (MyException e) {
 			e.printStackTrace();
@@ -105,7 +112,7 @@ public class CustomListener extends Base implements ITestListener, ISuiteListene
 	
 
 	@Override
-	public void onStart(ITestContext context) {
+	public void onStart(ITestContext context) {	
 		Log.info(context.getName() + " : Test Begins");
 		setParentTestCase(extentReport.createTest(context.getCurrentXmlTest().getName()));
 	}
@@ -113,7 +120,9 @@ public class CustomListener extends Base implements ITestListener, ISuiteListene
 	@Override
 	public void onFinish(ITestContext context) {
 		Log.info(context.getName() + " : Test Ends");
-		getBrowser().quit();
+		if(!runApi) {
+			getBrowser().quit();
+		}
 		extentReport.flush();
 	}
 
