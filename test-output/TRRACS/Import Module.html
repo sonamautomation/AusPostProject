@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Import Module</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>6/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Jan 08 23:36:44 IST 2020</td>
+<td>Started on:</td><td>Mon May 25 11:14:43 AEST 2020</td>
 </tr>
-<tr><td>Total time:</td><td>83 seconds (83939 ms)</td>
+<tr><td>Total time:</td><td>17 seconds (17799 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,43 +67,54 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.htcindia.trracs.testcases.SampleTest_001.TC_001()'><b>TC_001</b><br>Test class: com.htcindia.trracs.testcases.SampleTest_001</td>
-<td></td>
-<td>12</td>
-<td>com.htcindia.trracs.testcases.SampleTest_001@646d64ab</td></tr>
-<tr>
-<td title='com.htcindia.trracs.testcases.SampleTest_001.TC_002()'><b>TC_002</b><br>Test class: com.htcindia.trracs.testcases.SampleTest_001</td>
-<td></td>
-<td>11</td>
-<td>com.htcindia.trracs.testcases.SampleTest_001@646d64ab</td></tr>
-<tr>
-<td title='com.htcindia.trracs.testcases.SampleTest_001.TC_003()'><b>TC_003</b><br>Test class: com.htcindia.trracs.testcases.SampleTest_001</td>
-<td></td>
-<td>11</td>
-<td>com.htcindia.trracs.testcases.SampleTest_001@646d64ab</td></tr>
-<tr>
-<td title='com.htcindia.trracs.testcases.SampleTest_002.TC_004()'><b>TC_004</b><br>Test class: com.htcindia.trracs.testcases.SampleTest_002</td>
-<td></td>
-<td>11</td>
-<td>com.htcindia.trracs.testcases.SampleTest_002@59e5ddf</td></tr>
-<tr>
-<td title='com.htcindia.trracs.testcases.SampleTest_002.TC_005()'><b>TC_005</b><br>Test class: com.htcindia.trracs.testcases.SampleTest_002</td>
-<td></td>
-<td>13</td>
-<td>com.htcindia.trracs.testcases.SampleTest_002@59e5ddf</td></tr>
-<tr>
-<td title='com.htcindia.trracs.testcases.SampleTest_002.TC_006()'><b>TC_006</b><br>Test class: com.htcindia.trracs.testcases.SampleTest_002</td>
-<td></td>
-<td>78</td>
-<td>com.htcindia.trracs.testcases.SampleTest_002@59e5ddf</td></tr>
+<td title='com.htcindia.trracs.testcases.APITest.testAPIWithJsonRequest()'><b>testAPIWithJsonRequest</b><br>Test class: com.htcindia.trracs.testcases.APITest</td>
+<td><div><pre>java.lang.RuntimeException: java.lang.NullPointerException
+Caused by: java.lang.NullPointerException
+	at dataprovider.MyDataProvider.dataProviderMethod4(MyDataProvider.java:47)
+	... 20 more
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1086323658", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1086323658'><pre>java.lang.RuntimeException: java.lang.NullPointerException
+	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:161)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:429)
+	at org.testng.internal.Invoker.handleParameters(Invoker.java:1383)
+	at org.testng.internal.Invoker.createParameters(Invoker.java:1075)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1180)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
+	at org.testng.TestNG.run(TestNG.java:1057)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: java.lang.NullPointerException
+	at dataprovider.MyDataProvider.dataProviderMethod4(MyDataProvider.java:47)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
+	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:135)
+	... 20 more
+</pre></div></td>
+<td>17</td>
+<td>com.htcindia.trracs.testcases.APITest@14fa86ae</td></tr>
 </table><p>
 </body>
 </html>

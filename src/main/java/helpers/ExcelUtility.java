@@ -1,9 +1,14 @@
 package helpers;
 
 import java.io.FileInputStream;
+import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.codoid.products.exception.FilloException;
+import com.codoid.products.fillo.Connection;
+import com.codoid.products.fillo.Fillo;
+import com.codoid.products.fillo.Recordset;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.DataFormatter;
 import org.apache.poi.ss.usermodel.Row;
@@ -118,5 +123,25 @@ public class ExcelUtility {
 		}
 		// Return the cells array
 		return cells;
+	}
+
+	public static Recordset readExcel(String fileName) throws FilloException {
+		String filePath = Paths.get("resources","testData", fileName).toAbsolutePath().toString();
+		System.out.println(filePath);
+
+		//Create an Object of Fillo Class
+		Fillo fillo = new Fillo();
+
+		//Create an Object for Connection class and use getConnection() method defined inside Fillo class, to establish connection between  excelsheet and Fillo API’s.
+		Connection connection = fillo.getConnection(filePath);
+
+		//Select all the values present in a sheet
+		String strSelectQuery = "Select * from  Sheet1";
+		System.out.println(strSelectQuery);
+
+		//Execute the Select query and store the result in a Recordset class present in Fillo API.
+		Recordset recordset =null;
+		recordset = connection.executeQuery(strSelectQuery);
+		return recordset;
 	}
 }
