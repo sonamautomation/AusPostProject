@@ -14,7 +14,41 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
+    <repositories>
 
+      <repository>
+
+          <id>jboss-repo</id>
+
+          <url>http://repository.jboss.org/nexus/content/groups/public/</url>
+
+      </repository>
+
+            <repository>
+
+          <id>spring-repo</id>
+
+          <url>https://repo.spring.io/release</url>
+
+      </repository>
+
+            <repository>
+
+          <id>java-net-repo</id>
+
+          <url>https://maven.java.net/content/repositories/public/</url>
+
+      </repository>
+
+                 <repository>
+
+          <id>openMind-repo</id>
+
+          <url>http://repository.openmindonline.it/</url>
+
+      </repository>
+
+</repositories>
 	<build>
 
 		<finalName>trracs</finalName>
@@ -221,10 +255,15 @@
 </dependency>
 
 <!-- https://mvnrepository.com/artifact/javax.jms/jms -->
+
 <dependency>
-<groupId>tibco-ems</groupId>
-<artifactId>jms</artifactId>
-<version>2.0</version>
+
+    <groupId>javax.jms</groupId>
+
+    <artifactId>jms</artifactId>
+
+    <version>1.1</version>
+
 </dependency>
 
 	</dependencies>
