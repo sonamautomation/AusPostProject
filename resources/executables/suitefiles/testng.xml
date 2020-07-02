@@ -7,9 +7,10 @@
 	</listeners>
 
 <test name="BOEClosureTest">
-<parameter name="browser" value="Chrome"/>
+	<parameter name="browser" value="Chrome"/>
 		<classes>
 			<class name="testcases.APITest" />
+			<class name="testcases.SAPGuiTest" />
 		</classes>
 	</test>
 </suite>
