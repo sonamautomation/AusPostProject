@@ -1,16 +1,17 @@
 package base;
 
 import java.io.File;
+import java.io.IOException;
+import java.lang.reflect.Field;
 import java.net.MalformedURLException;
+import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import org.apache.commons.io.FileUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.ITestClass;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 
@@ -27,13 +28,11 @@ import helpers.PasswordEncryptDecrypt;
 import helpers.SnapShot;
 import messageObjects.MessageConstruct;
 import messageObjects.MessageFactory;
-import pages.BOEClosurePage;
-import pages.BOEExtensionPage;
 import pages.DashboardPage;
 import pages.LoginPage;
-import pages.OrmMasterPage;
 
 public class Base {
+
 
 	/* <---------- Page objects ---------> */
 	protected LoginPage loginPage;
@@ -75,6 +74,9 @@ public class Base {
 	public static Boolean runApi;
 	public static String encodedAuth;
 	public static String tibcoUserId, tibcoPassword, tibcoQueue, tibcoURL;
+	public static String SAPUsername;
+	public static String SAPPassword;
+	public static String JacobDLLFile;
 
 	public static ThreadLocal<WebDriver> browser = new ThreadLocal<WebDriver>();
 
@@ -134,6 +136,9 @@ public class Base {
 		tibcoPassword=config.properties.get("PUB_PASS"); 
 		tibcoQueue=config.properties.get("TIBCO_QUEUE_NAME");
 		tibcoURL=config.properties.get("TIBCO_URL");
+		SAPUsername = config.properties.get("SAPUserName");
+		JacobDLLFile = config.properties.get("JacobDLLFile");
+		SAPPassword = config.properties.get("SAPPassword");
 		Log.info("Successfully Gathered Configuration Properties...");
 	}
 
@@ -233,5 +238,33 @@ public class Base {
 			e.getMessage();
 		}	
 	}
+	public  void copyFileUsingJava7Files(File source, File dest) throws IOException {
+		String name = source.getName();
+		File targetFile = new File(dest+"/"+name);
+		FileUtils.copyFile(source, targetFile);
+	}
+
+
+	public String searchPath(String s) throws NoSuchFieldException, IllegalAccessException {
+		String str= null;
+		Field field = ClassLoader.class.getDeclaredField("usr_paths");
+		field.setAccessible(true);
+		String[] paths = (String[]) field.get(null);
+		for (int i = 0; i < paths.length; i++) {
+			if (paths[i].contains(s)) {
+				str = paths[i];
+				break;
+			}
+		}
+		return str;
+	}
+
+	public void pasteDLLtoMavenFolder() throws NoSuchFieldException, IllegalAccessException, IOException {
+		String filePath = Paths.get("resources", "executables", "lib", JacobDLLFile).toAbsolutePath().toString();
+		File src = new File(filePath);
+		File dest = new File(searchPath("Maven"));
+		copyFileUsingJava7Files(src, dest);
+	}
+
 
 }

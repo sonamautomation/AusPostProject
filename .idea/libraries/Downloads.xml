@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Downloads">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/resources/executables/lib/jacob-1.19.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
