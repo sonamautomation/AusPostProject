@@ -43,7 +43,7 @@ public class BasePage {
 	protected WebDriverWait myWait;
 	public static DatabaseManager DBManager;
 	JavascriptExecutor js;
-	public static boolean smartObjHandler = true;
+	public static boolean smartObjHandler = false;
 	public enum LocType{id,name,tagName , className,value,title,type};
 	public enum LocatorEntry{locatorValue,locatorType,url};
 
