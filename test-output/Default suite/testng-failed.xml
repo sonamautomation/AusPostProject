@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]" parallel="none">
-  <test name="Default test(failed)" parallel="none">
+<suite name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
     <classes>
-      <class name="testcases.SampleTest_002">
+      <class name="testcases.SampleTest">
         <methods>
-          <include name="before_Tests"/>
-          <include name="TC_005"/>
-          <include name="TC_006"/>
-          <include name="TC_004"/>
+          <include name="testSample"/>
         </methods>
-      </class> <!-- testcases.SampleTest_002 -->
+      </class> <!-- testcases.SampleTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -6,11 +6,10 @@
 			class-name="listener.CustomListener" />
 	</listeners>
 
-<test name="BOEClosureTest">
+<test name="SampleTest">
 	<parameter name="browser" value="Chrome"/>
 		<classes>
-			<class name="testcases.APITest" />
-			<class name="testcases.SAPGuiTest" />
+			<class name="testcases.SampleTest" />
 		</classes>
 	</test>
 </suite>

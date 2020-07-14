@@ -1,3 +1,3 @@
 cd .\auspost-javatestautomation
-docker-compose down
+docker stop zalenium
 exit
