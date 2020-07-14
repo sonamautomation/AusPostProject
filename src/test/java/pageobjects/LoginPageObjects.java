@@ -23,5 +23,27 @@ public interface LoginPageObjects {
 	By SESSIONEXPIRE = By.xpath("//div[@id='welcome']/following::div[1]/button");
 	By LOGOUTBUTTON = By.xpath("//a[starts-with(text(),'Logout')]");
 	By LOGINEXPIRE = By.xpath("//span[text()='Yes']");
+	By aboutUs = By.xpath("//span[text()='About Us']");
+	By revITLnk = By.xpath("//a[@title='Revolution IT']");
+	By revAboutUs = By.xpath("//h2[text()='About Revolution IT']");
+	By revITCareers=By.xpath("//span[contains(text(),'Careers')]");
+	By jobSearchCat=By.cssSelector("#ja-def-2525");
+	By jobSearchsubCat=By.cssSelector("#ja-def-2526");
+	By jobSearchloc=By.cssSelector("#ja-def-2527");
+	By workType=By.cssSelector("#ja-def-2528");
+	By keywords=By.cssSelector("#ja-keywords");
+	By searchButton=By.className("ja-button");
+	By jobRole=By.linkText("Senior Test Manager - Global Financial Institution");
+
+	By navigateRes=By.id("nav-2");
+	By enterAddress=By.xpath("//input[@placeholder='Type your address']");
+	By navigateNBNco=By.id("nav-6");
+	By nbnCareers=By.linkText("Careers");
+	By jobs=By.xpath("(//*[contains(text(),'Browse current job openings')])[last()]");
+	By searchForJobs=By.xpath("//*[contains(text(),'Search for Jobs')]");
+
+
+
+
 
 }

@@ -23,7 +23,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 5 failed tests</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -37,7 +37,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-API">
-              <span class="suite-name border-failed">API</span>
+              <span class="suite-name border-passed">API</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -90,41 +90,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">5 methods, 5 failed,   </span>
+                    <span class="method-stats">1 method,   1 passed</span>
                   </li>
                   <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-API" class="hide-methods failed suite-API"> (hide)</a> <!-- hide-methods failed suite-API -->
-                      <a href="#" panel-name="suite-API" class="show-methods failed suite-API"> (show)</a> <!-- show-methods failed suite-API -->
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-API" class="hide-methods passed suite-API"> (hide)</a> <!-- hide-methods passed suite-API -->
+                      <a href="#" panel-name="suite-API" class="show-methods passed suite-API"> (show)</a> <!-- show-methods passed suite-API -->
                     </span>
-                    <div class="method-list-content failed suite-API">
+                    <div class="method-list-content passed suite-API">
                       <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-API" title="testcases.APITest" hash-for-method="testAPIWithJsonRequest({productID=1234585, requestType=POST, response=202, jsonPath=article/product/sub_product_id, type=JS...)">testAPIWithJsonRequest({productID=1234585, requestType=POST, response=202, jsonPath=article/product/sub_product_id, type=JS...)</a> <!-- method navigator-link -->
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-API" title="testcases.SampleTest" hash-for-method="testSample(public void testcases.SampleTest.testSample(java.lang.reflect.Method) throws java.lang.Exception)">testSample(public void testcases.SampleTest.testSample(java.lang.reflect.Method) throws java.lang.Exception)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                      <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-API" title="testcases.APITest" hash-for-method="testAPIWithJsonRequest({productID=5432179, requestType=POST, response=202, jsonPath=article/product/sub_product_id, type=JS...)">testAPIWithJsonRequest({productID=5432179, requestType=POST, response=202, jsonPath=article/product/sub_product_id, type=JS...)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-API" title="testcases.APITest" hash-for-method="testAPIWithXMLRequest({requestType=POST, response=200, type=XML, TemplateId=2, ev:EventType=AFP-ER20}, public void testcas...)">testAPIWithXMLRequest({requestType=POST, response=200, type=XML, TemplateId=2, ev:EventType=AFP-ER20}, public void testcas...)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-API" title="testcases.APITest" hash-for-method="testAPIWithXMLRequest({requestType=POST, response=200, type=XML, TemplateId=2, ev:EventType=AFP-ER45}, public void testcas...)">testAPIWithXMLRequest({requestType=POST, response=200, type=XML, TemplateId=2, ev:EventType=AFP-ER45}, public void testcas...)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-API" title="testcases.APITest" hash-for-method="testAPIWithXMLRequest({requestType=POST, response=200, type=XML, TemplateId=2, ev:EventType=AFP-ER30}, public void testcas...)">testAPIWithXMLRequest({requestType=POST, response=200, type=XML, TemplateId=2, ev:EventType=AFP-ER30}, public void testcas...)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-API -->
+                    </div> <!-- method-list-content passed suite-API -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -136,145 +116,22 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-API" class="panel API">
-          <div class="suite-API-class-failed">
+          <div class="suite-API-class-passed">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">testcases.APITest</span>
+              <img src="passed.png"/>
+              <span class="class-name">testcases.SampleTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testAPIWithJsonRequest({productID=1234585, requestType=POST, response=202, jsonPath=article/product/sub_product_id, type=JS...)">
-                  </a> <!-- testAPIWithJsonRequest({productID=1234585, requestType=POST, response=202, jsonPath=article/product/sub_product_id, type=JS...) -->
-                  <span class="method-name">testAPIWithJsonRequest</span>
-                  <span class="parameters">({productID=1234585, requestType=POST, response=202, jsonPath=article/product/sub_product_id, type=JSON, TemplateId=1}, public void testcases.APITest.testAPIWithJsonRequest(java.util.Map,java.lang.reflect.Method) throws java.lang.Exception)</span>
-                  <div class="stack-trace">java.lang.IllegalArgumentException: password cannot be null
-	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:59)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:237)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:249)
-	at io.restassured.internal.common.assertion.AssertParameter.notNull(AssertParameter.groovy:26)
-	at io.restassured.internal.common.assertion.AssertParameter$notNull.callStatic(Unknown Source)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallStatic(CallSiteArray.java:55)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callStatic(AbstractCallSite.java:196)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callStatic(AbstractCallSite.java:216)
-	at io.restassured.internal.AuthenticationSpecificationImpl.basic(AuthenticationSpecificationImpl.groovy:47)
-	at messageObjects.MessageFactory.getResponse(MessageFactory.java:34)
-	at testcases.APITest.testAPIWithJsonRequest(APITest.java:41)
-... Removed 30 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="testAPIWithJsonRequest({productID=5432179, requestType=POST, response=202, jsonPath=article/product/sub_product_id, type=JS...)">
-                  </a> <!-- testAPIWithJsonRequest({productID=5432179, requestType=POST, response=202, jsonPath=article/product/sub_product_id, type=JS...) -->
-                  <span class="method-name">testAPIWithJsonRequest</span>
-                  <span class="parameters">({productID=5432179, requestType=POST, response=202, jsonPath=article/product/sub_product_id, type=JSON, TemplateId=3}, public void testcases.APITest.testAPIWithJsonRequest(java.util.Map,java.lang.reflect.Method) throws java.lang.Exception)</span>
-                  <div class="stack-trace">java.lang.IllegalArgumentException: password cannot be null
-	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:249)
-	at io.restassured.internal.common.assertion.AssertParameter.notNull(AssertParameter.groovy:26)
-	at io.restassured.internal.common.assertion.AssertParameter$notNull.callStatic(Unknown Source)
-	at io.restassured.internal.AuthenticationSpecificationImpl.basic(AuthenticationSpecificationImpl.groovy:47)
-	at messageObjects.MessageFactory.getResponse(MessageFactory.java:34)
-	at testcases.APITest.testAPIWithJsonRequest(APITest.java:41)
-... Removed 30 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="testAPIWithXMLRequest({requestType=POST, response=200, type=XML, TemplateId=2, ev:EventType=AFP-ER20}, public void testcas...)">
-                  </a> <!-- testAPIWithXMLRequest({requestType=POST, response=200, type=XML, TemplateId=2, ev:EventType=AFP-ER20}, public void testcas...) -->
-                  <span class="method-name">testAPIWithXMLRequest</span>
-                  <span class="parameters">({requestType=POST, response=200, type=XML, TemplateId=2, ev:EventType=AFP-ER20}, public void testcases.APITest.testAPIWithXMLRequest(java.util.Map,java.lang.reflect.Method) throws java.lang.Exception)</span>
-                  <div class="stack-trace">java.net.UnknownHostException: hxaix15.corptest.aptest.local
-	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
-	at java.net.PlainSocketImpl.connect(Unknown Source)
-	at java.net.SocksSocketImpl.connect(Unknown Source)
-	at java.net.Socket.connect(Unknown Source)
-	at sun.net.NetworkClient.doConnect(Unknown Source)
-	at sun.net.www.http.HttpClient.openServer(Unknown Source)
-	at sun.net.www.http.HttpClient.openServer(Unknown Source)
-	at sun.net.www.http.HttpClient.&lt;init&gt;(Unknown Source)
-	at sun.net.www.http.HttpClient.New(Unknown Source)
-	at sun.net.www.http.HttpClient.New(Unknown Source)
-	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(Unknown Source)
-	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(Unknown Source)
-	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(Unknown Source)
-	at sun.net.www.protocol.http.HttpURLConnection.connect(Unknown Source)
-	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream0(Unknown Source)
-	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream(Unknown Source)
-	at messageObjects.MessageFactory.getSOAPResponse(MessageFactory.java:80)
-	at messageObjects.MessageFactory.getResponse(MessageFactory.java:40)
-	at testcases.APITest.testAPIWithXMLRequest(APITest.java:76)
-... Removed 24 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="testAPIWithXMLRequest({requestType=POST, response=200, type=XML, TemplateId=2, ev:EventType=AFP-ER45}, public void testcas...)">
-                  </a> <!-- testAPIWithXMLRequest({requestType=POST, response=200, type=XML, TemplateId=2, ev:EventType=AFP-ER45}, public void testcas...) -->
-                  <span class="method-name">testAPIWithXMLRequest</span>
-                  <span class="parameters">({requestType=POST, response=200, type=XML, TemplateId=2, ev:EventType=AFP-ER45}, public void testcases.APITest.testAPIWithXMLRequest(java.util.Map,java.lang.reflect.Method) throws java.lang.Exception)</span>
-                  <div class="stack-trace">java.net.UnknownHostException: hxaix15.corptest.aptest.local
-	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
-	at java.net.PlainSocketImpl.connect(Unknown Source)
-	at java.net.SocksSocketImpl.connect(Unknown Source)
-	at java.net.Socket.connect(Unknown Source)
-	at sun.net.NetworkClient.doConnect(Unknown Source)
-	at sun.net.www.http.HttpClient.openServer(Unknown Source)
-	at sun.net.www.http.HttpClient.openServer(Unknown Source)
-	at sun.net.www.http.HttpClient.&lt;init&gt;(Unknown Source)
-	at sun.net.www.http.HttpClient.New(Unknown Source)
-	at sun.net.www.http.HttpClient.New(Unknown Source)
-	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(Unknown Source)
-	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(Unknown Source)
-	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(Unknown Source)
-	at sun.net.www.protocol.http.HttpURLConnection.connect(Unknown Source)
-	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream0(Unknown Source)
-	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream(Unknown Source)
-	at messageObjects.MessageFactory.getSOAPResponse(MessageFactory.java:80)
-	at messageObjects.MessageFactory.getResponse(MessageFactory.java:40)
-	at testcases.APITest.testAPIWithXMLRequest(APITest.java:76)
-... Removed 24 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="testAPIWithXMLRequest({requestType=POST, response=200, type=XML, TemplateId=2, ev:EventType=AFP-ER30}, public void testcas...)">
-                  </a> <!-- testAPIWithXMLRequest({requestType=POST, response=200, type=XML, TemplateId=2, ev:EventType=AFP-ER30}, public void testcas...) -->
-                  <span class="method-name">testAPIWithXMLRequest</span>
-                  <span class="parameters">({requestType=POST, response=200, type=XML, TemplateId=2, ev:EventType=AFP-ER30}, public void testcases.APITest.testAPIWithXMLRequest(java.util.Map,java.lang.reflect.Method) throws java.lang.Exception)</span>
-                  <div class="stack-trace">java.net.UnknownHostException: hxaix15.corptest.aptest.local
-	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
-	at java.net.PlainSocketImpl.connect(Unknown Source)
-	at java.net.SocksSocketImpl.connect(Unknown Source)
-	at java.net.Socket.connect(Unknown Source)
-	at sun.net.NetworkClient.doConnect(Unknown Source)
-	at sun.net.www.http.HttpClient.openServer(Unknown Source)
-	at sun.net.www.http.HttpClient.openServer(Unknown Source)
-	at sun.net.www.http.HttpClient.&lt;init&gt;(Unknown Source)
-	at sun.net.www.http.HttpClient.New(Unknown Source)
-	at sun.net.www.http.HttpClient.New(Unknown Source)
-	at sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(Unknown Source)
-	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(Unknown Source)
-	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(Unknown Source)
-	at sun.net.www.protocol.http.HttpURLConnection.connect(Unknown Source)
-	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream0(Unknown Source)
-	at sun.net.www.protocol.http.HttpURLConnection.getOutputStream(Unknown Source)
-	at messageObjects.MessageFactory.getSOAPResponse(MessageFactory.java:80)
-	at messageObjects.MessageFactory.getResponse(MessageFactory.java:40)
-	at testcases.APITest.testAPIWithXMLRequest(APITest.java:76)
-... Removed 24 stack frames
-</div> <!-- stack-trace -->
+                  <a name="testSample(public void testcases.SampleTest.testSample(java.lang.reflect.Method) throws java.lang.Exception)">
+                  </a> <!-- testSample(public void testcases.SampleTest.testSample(java.lang.reflect.Method) throws java.lang.Exception) -->
+                  <span class="method-name">testSample</span>
+                  <span class="parameters">(public void testcases.SampleTest.testSample(java.lang.reflect.Method) throws java.lang.Exception)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-API-class-failed -->
+          </div> <!-- suite-API-class-passed -->
         </div> <!-- panel API -->
         <div panel-name="test-xml-API" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -288,12 +145,12 @@
   &lt;listeners&gt;
     &lt;listener class-name=&quot;listener.CustomListener&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test name=&quot;BOEClosureTest&quot;&gt;
+  &lt;test name=&quot;SampleTest&quot;&gt;
     &lt;parameter name=&quot;browser&quot; value=&quot;Chrome&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;testcases.APITest&quot;/&gt;
+      &lt;class name=&quot;testcases.SampleTest&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- BOEClosureTest --&gt;
+  &lt;/test&gt; &lt;!-- SampleTest --&gt;
 &lt;/suite&gt; &lt;!-- API --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -305,7 +162,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">BOEClosureTest (1 class)</span>
+                <span class="test-name">SampleTest (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -331,32 +188,16 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(5);
+data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testAPIWithJsonRequest')
-data.setCell(0, 2, 'testcases.APITest')
-data.setCell(0, 3, 1592);
-data.setCell(1, 0, 1)
-data.setCell(1, 1, 'testAPIWithXMLRequest')
-data.setCell(1, 2, 'testcases.APITest')
-data.setCell(1, 3, 256);
-data.setCell(2, 0, 2)
-data.setCell(2, 1, 'testAPIWithJsonRequest')
-data.setCell(2, 2, 'testcases.APITest')
-data.setCell(2, 3, 191);
-data.setCell(3, 0, 3)
-data.setCell(3, 1, 'testAPIWithXMLRequest')
-data.setCell(3, 2, 'testcases.APITest')
-data.setCell(3, 3, 154);
-data.setCell(4, 0, 4)
-data.setCell(4, 1, 'testAPIWithXMLRequest')
-data.setCell(4, 2, 'testcases.APITest')
-data.setCell(4, 3, 75);
+data.setCell(0, 1, 'testSample')
+data.setCell(0, 2, 'testcases.SampleTest')
+data.setCell(0, 3, 8331);
 window.suiteTableData['API']= { tableData: data, tableDiv: 'times-div-API'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 seconds</span>
+              <span class="suite-total-time">Total running time: 8 seconds</span>
               <div id="times-div-API">
               </div> <!-- times-div-API -->
             </div> <!-- times-div -->
@@ -382,40 +223,14 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">testcases.APITest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">testcases.SampleTest</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
                 <span class="method-name">before_Tests(Chrome)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">testAPIWithJsonRequest({productID=1234585, requestType=POST, response=202, jsonPath=article/product/sub_product_id, type=JS...)</span>
-                <span class="method-start">1087 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">testAPIWithJsonRequest({productID=5432179, requestType=POST, response=202, jsonPath=article/product/sub_product_id, type=JS...)</span>
-                <span class="method-start">2687 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">testAPIWithXMLRequest({requestType=POST, response=200, type=XML, TemplateId=2, ev:EventType=AFP-ER20}, public void testcas...)</span>
-                <span class="method-start">3129 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">testAPIWithXMLRequest({requestType=POST, response=200, type=XML, TemplateId=2, ev:EventType=AFP-ER30}, public void testcas...)</span>
-                <span class="method-start">3405 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">testAPIWithXMLRequest({requestType=POST, response=200, type=XML, TemplateId=2, ev:EventType=AFP-ER45}, public void testcas...)</span>
-                <span class="method-start">3559 ms</span>
+                <span class="method-name">testSample(public void testcases.SampleTest.testSample(java.lang.reflect.Method) throws java.lang.Exception)</span>
+                <span class="method-start">11062 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

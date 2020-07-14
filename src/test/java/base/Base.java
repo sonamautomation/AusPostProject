@@ -77,6 +77,7 @@ public class Base {
 	public static String SAPUsername;
 	public static String SAPPassword;
 	public static String JacobDLLFile;
+	public static String appURL;
 
 	public static ThreadLocal<WebDriver> browser = new ThreadLocal<WebDriver>();
 
@@ -120,10 +121,11 @@ public class Base {
 		nameOfBrowser = config.properties.get("browserName");
 		driverFilesDirectory = config.properties.get("driverFilesPath");
 		snapShotsDirectory = config.properties.get("snapShotsPath");
-		hubURL = config.properties.get("hubURL");
+		hubURL = config.properties.get("hubURL");	
 		container =  config.properties.get("containerOn");
 		hostUserName = config.properties.get("hostUserName");
 		encryptPswd = config.properties.get("hostPassword");
+		appURL = config.properties.get("appURL");
 		hostPassword = passwordEncryptDecrypt.decrypt(encryptPswd);
 		uri = config.properties.get("hostURI");
 		xmlUri = config.properties.get("xmlHostURI");
@@ -139,6 +141,7 @@ public class Base {
 		SAPUsername = config.properties.get("SAPUserName");
 		JacobDLLFile = config.properties.get("JacobDLLFile");
 		SAPPassword = config.properties.get("SAPPassword");
+		
 		Log.info("Successfully Gathered Configuration Properties...");
 	}
 
@@ -223,6 +226,7 @@ public class Base {
 				try {
 					try {
 						trigger(typeOfBrowser, browser, driverFilesDirectory);
+						getBrowser().get(appURL);
 					} catch (InterruptedException e1) {
 						// TODO Auto-generated catch block
 						e1.printStackTrace();
