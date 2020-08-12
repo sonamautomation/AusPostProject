@@ -1,25 +1,9 @@
 package base;
 
-import java.io.File;
-import java.io.IOException;
-import java.lang.reflect.Field;
-import java.net.MalformedURLException;
-import java.nio.file.Paths;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
-import org.apache.commons.io.FileUtils;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-import org.openqa.selenium.WebDriver;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Parameters;
-
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
-
 import config.properties.ConfigHolder;
 import drivers.DriverFactory;
 import helpers.ExcelUtility;
@@ -27,9 +11,31 @@ import helpers.MyException;
 import helpers.PasswordEncryptDecrypt;
 import helpers.SnapShot;
 import messageObjects.MessageConstruct;
+import messageObjects.ZephyrJiraMessaging;
 import messageObjects.MessageFactory;
+import messageObjects.NewAnnotation;
+import org.apache.commons.io.FileUtils;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Optional;
+import org.testng.annotations.Parameters;
 import pages.DashboardPage;
 import pages.LoginPage;
+
+import java.io.File;
+import java.io.IOException;
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
+import java.net.MalformedURLException;
+import java.net.URISyntaxException;
+import java.nio.file.Paths;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+
 
 public class Base {
 
@@ -78,6 +84,20 @@ public class Base {
 	public static String SAPPassword;
 	public static String JacobDLLFile;
 	public static String appURL;
+	public static String zephyrBaseUrl;
+	public static String accessKey;
+	public static String secretKey;
+	public static String apiToken;
+	public static String accountId;
+	//public static String projectId;
+	public static String projectKey;
+	public static String cycleId;
+	public static String versionId;
+	public static String issueTypeId;
+	public static String jiraBaseURL;
+	public static String jiraUserName;
+	public static String testcaseName;
+	public static int rowExecuted;
 
 	public static ThreadLocal<WebDriver> browser = new ThreadLocal<WebDriver>();
 
@@ -141,7 +161,18 @@ public class Base {
 		SAPUsername = config.properties.get("SAPUserName");
 		JacobDLLFile = config.properties.get("JacobDLLFile");
 		SAPPassword = config.properties.get("SAPPassword");
-		
+		zephyrBaseUrl = config.properties.get("zephyrBaseUrl");
+		accessKey = config.properties.get("accessKey");
+		secretKey = config.properties.get("secretKey");
+		apiToken = config.properties.get("apiToken");
+		accountId = config.properties.get("userAccountId");
+		projectKey = config.properties.get("jiraProjectKey");
+		cycleId = config.properties.get("executionCycleId");
+		versionId = config.properties.get("executionVersionId");
+		issueTypeId = config.properties.get("jiraIssueTypeId");
+		jiraBaseURL = config.properties.get("jiraBaseURL");
+		jiraUserName = config.properties.get("jiraUserName");
+
 		Log.info("Successfully Gathered Configuration Properties...");
 	}
 
@@ -270,5 +301,75 @@ public class Base {
 		copyFileUsingJava7Files(src, dest);
 	}
 
+	@AfterMethod
+	public void after_Method() {
+		//Update Jira and zephyr with test results.
+		ZephyrJiraActivity();
+	}
+
+
+	public int getStatus(String status) {
+		switch (status.toUpperCase()) {
+			case "PASS":
+				return 1;
+			case "FAIL":
+				return 2;
+			case "WIP":
+				return 3;
+			default:
+				return -1;
+		}
+	}
+
+	public void ZephyrJiraActivity(){
+		String testID= null;
+
+		//fetch test method name for the first time.
+		for (Method method:getClass().getDeclaredMethods()) {
+			if (method.getName().contains(getTestCase().getModel().getName())) {
+				if (testcaseName==null){
+					testcaseName = method.getName();
+				}
+			}
+		}
+
+		// Fetch Test case Id from Annotation Parameters if it exists.
+		for (Method method:getClass().getDeclaredMethods()) {
+			if (method.getName().contains(getTestCase().getModel().getName())) {
+				if (method.isAnnotationPresent(NewAnnotation.TestParameters.class)) {
+					NewAnnotation.TestParameters useAsTestName = method.getAnnotation(NewAnnotation.TestParameters.class);
+					testID = useAsTestName.testId();
+					System.out.println("Test Case ID = " + testID);
+											break;
+				}
+			}
+		}
+
+		// Fetch which data row is being executed.Also update method name.
+		for (Method method:getClass().getDeclaredMethods()) {
+			if (method.getName().contains(getTestCase().getModel().getName())) {
+				if (testcaseName.contentEquals(getTestCase().getModel().getName())){
+					rowExecuted = rowExecuted+1;
+				}else{
+					testcaseName = getTestCase().getModel().getName();
+					rowExecuted = 0;
+					rowExecuted = rowExecuted+1;
+				}
+			}
+			}
+				System.out.println("Row ID = " + rowExecuted);
+
+		try {
+			ZephyrJiraMessaging.updateResultsToZephyr(getTestCase().getModel().getName(), testID, getStatus(getTestCase().getStatus().toString()), rowExecuted);
+					} catch (URISyntaxException | IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+	@BeforeClass
+	public void before_Class() {
+		rowExecuted = 0;
+		testcaseName = null;
+	}
 
 }

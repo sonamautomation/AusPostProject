@@ -3,6 +3,8 @@ package testcases;
 
 import java.lang.reflect.Method;
 import java.util.Map;
+
+import messageObjects.NewAnnotation;
 import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
@@ -52,6 +54,7 @@ public class APITest extends Base {
 
 
 	@Test(dataProvider = "APITestData", dataProviderClass = MyDataProvider.class)
+	@NewAnnotation.TestParameters(testId= "TSP-38")
 	public void testAPIWithXMLRequest(Map<String,String> testData,Method method) throws Exception
 	{
 		setTestCase(getParentTestCase().createNode(method.getName()).assignCategory("API"));
