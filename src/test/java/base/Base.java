@@ -19,6 +19,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
@@ -310,14 +311,14 @@ public class Base {
 
 	public int getStatus(String status) {
 		switch (status.toUpperCase()) {
-			case "PASS":
-				return 1;
-			case "FAIL":
-				return 2;
-			case "WIP":
-				return 3;
-			default:
-				return -1;
+		case "PASS":
+			return 1;
+		case "FAIL":
+			return 2;
+		case "WIP":
+			return 3;
+		default:
+			return -1;
 		}
 	}
 
@@ -340,7 +341,7 @@ public class Base {
 					NewAnnotation.TestParameters useAsTestName = method.getAnnotation(NewAnnotation.TestParameters.class);
 					testID = useAsTestName.testId();
 					System.out.println("Test Case ID = " + testID);
-											break;
+					break;
 				}
 			}
 		}
@@ -356,14 +357,20 @@ public class Base {
 					rowExecuted = rowExecuted+1;
 				}
 			}
-			}
-				System.out.println("Row ID = " + rowExecuted);
-
-		try {
-			ZephyrJiraMessaging.updateResultsToZephyr(getTestCase().getModel().getName(), testID, getStatus(getTestCase().getStatus().toString()), rowExecuted);
-					} catch (URISyntaxException | IOException e) {
-			e.printStackTrace();
 		}
+		System.out.println("Row ID = " + rowExecuted);
+
+	
+			try {
+				ZephyrJiraMessaging.updateResultsToZephyr(getTestCase().getModel().getName(), testID, getStatus(getTestCase().getStatus().toString()), rowExecuted);
+			} catch (URISyntaxException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		
 	}
 
 	@BeforeClass
