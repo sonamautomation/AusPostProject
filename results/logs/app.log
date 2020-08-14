@@ -321,3 +321,54 @@
 17:32:57.261 INFO  TRRACS -Successfully Launched Local:Chrome
 17:33:14.215 INFO  TRRACS -testSample1 : Test Case Passed
 17:33:14.239 INFO  TRRACS -SampleTest : Test Ends
+19:03:31.112 INFO  TRRACS -API : Test Suite Begins
+19:03:31.120 INFO  TRRACS -Gathering Configuration Properties...
+19:03:31.129 INFO  TRRACS -Successfully Gathered Configuration Properties...
+19:03:31.213 INFO  TRRACS -JDBCTest : Test Begins
+19:03:31.234 INFO  TRRACS -JDBCInsertQuery : Test Case Skipped
+19:03:31.237 INFO  TRRACS -JDBCTest : Test Ends
+19:04:53.320 INFO  TRRACS -API : Test Suite Begins
+19:04:53.327 INFO  TRRACS -Gathering Configuration Properties...
+19:04:53.336 INFO  TRRACS -Successfully Gathered Configuration Properties...
+19:04:53.429 INFO  TRRACS -JDBCTest : Test Begins
+19:04:53.450 INFO  TRRACS -JDBCInsertQuery : Test Case Skipped
+19:04:53.453 INFO  TRRACS -JDBCTest : Test Ends
+19:06:04.442 INFO  TRRACS -API : Test Suite Begins
+19:06:04.450 INFO  TRRACS -Gathering Configuration Properties...
+19:06:04.458 INFO  TRRACS -Successfully Gathered Configuration Properties...
+19:06:04.539 INFO  TRRACS -JDBCTest : Test Begins
+19:06:04.558 INFO  TRRACS -JDBCInsertQuery : Test Case Skipped
+19:06:04.559 INFO  TRRACS -JDBCTest : Test Ends
+19:08:14.789 INFO  TRRACS -API : Test Suite Begins
+19:08:14.797 INFO  TRRACS -Gathering Configuration Properties...
+19:08:14.808 INFO  TRRACS -Successfully Gathered Configuration Properties...
+19:08:14.894 INFO  TRRACS -JDBCTest : Test Begins
+19:08:14.913 INFO  TRRACS -JDBCInsertQuery : Test Case Skipped
+19:08:14.915 INFO  TRRACS -JDBCTest : Test Ends
+19:08:33.313 INFO  TRRACS -API : Test Suite Begins
+19:08:33.320 INFO  TRRACS -Gathering Configuration Properties...
+19:08:33.329 INFO  TRRACS -Successfully Gathered Configuration Properties...
+19:08:33.421 INFO  TRRACS -JDBCTest : Test Begins
+19:08:33.441 INFO  TRRACS -JDBCInsertQuery : Test Case Skipped
+19:08:33.443 INFO  TRRACS -JDBCTest : Test Ends
+19:09:31.100 INFO  TRRACS -API : Test Suite Begins
+19:09:31.110 INFO  TRRACS -Gathering Configuration Properties...
+19:09:31.119 INFO  TRRACS -Successfully Gathered Configuration Properties...
+19:09:31.201 INFO  TRRACS -JDBCTest : Test Begins
+19:09:49.515 INFO  TRRACS -JDBCInsertQuery : Test Case Failed
+19:10:18.039 INFO  TRRACS -testSample2 : Test Case Failed
+19:10:38.756 INFO  TRRACS -JDBCTest : Test Ends
+19:11:37.357 INFO  TRRACS -API : Test Suite Begins
+19:11:37.363 INFO  TRRACS -Gathering Configuration Properties...
+19:11:37.371 INFO  TRRACS -Successfully Gathered Configuration Properties...
+19:11:37.452 INFO  TRRACS -JDBCTest : Test Begins
+19:11:38.127 INFO  TRRACS -JDBCInsertQuery : Test Case Passed
+19:11:55.994 INFO  TRRACS -testSample2 : Test Case Passed
+19:12:16.501 INFO  TRRACS -JDBCTest : Test Ends
+19:14:15.748 INFO  TRRACS -API : Test Suite Begins
+19:14:15.755 INFO  TRRACS -Gathering Configuration Properties...
+19:14:15.763 INFO  TRRACS -Successfully Gathered Configuration Properties...
+19:14:15.833 INFO  TRRACS -JDBCTest : Test Begins
+19:14:16.504 INFO  TRRACS -JDBCInsertQuery : Test Case Passed
+19:14:50.216 INFO  TRRACS -testSample2 : Test Case Passed
+19:15:11.074 INFO  TRRACS -JDBCTest : Test Ends

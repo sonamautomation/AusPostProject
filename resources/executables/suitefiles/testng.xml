@@ -6,10 +6,10 @@
 			class-name="listener.CustomListener" />
 	</listeners>
 
-<test name="SampleTest">
+<test name="JDBCTest">
 	<parameter name="browser" value="Chrome"/>
 		<classes>
-			<class name="testcases.SampleTest" />
+			<class name="testcases.JDBCTest" />
 		</classes>
 	</test>
 </suite>
