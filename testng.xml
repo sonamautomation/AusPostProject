@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Suite" thread-count="5" parallel="tests">
+<suite name="Suite">
+	<parameter name="browser" value="Firefox"></parameter>
 	<listeners>
-		<listener class-name="com.htcindia.trracs.listener.CustomListener" />
+		<listener class-name="listener.MyListener"></listener>
 	</listeners>
+
 
 	<!-- Test 
 	<test name="BOEExtensionTest">
@@ -16,10 +18,17 @@
 			<class name="com.htcindia.trracs.testcases.OrmMasterPageTest" />
 		</classes>
 	</test>  -->
-	<test name="BOEClosureTest">
+	<!--test name="BOEClosureTest">
 		<classes>
 			<class name="com.htcindia.trracs.testcases.BOEClosureTest" />
+		</classes-->
+
+	<test name="MounteBankAPITest">
+		<classes>
+			<class name="testcases.MounteBankAPITest" />
 		</classes>
 	</test>
+
+
 
 </suite> <!-- Suite -->

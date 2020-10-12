@@ -21,7 +21,6 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import pages.DashboardPage;
 import pages.LoginPage;
@@ -99,6 +98,9 @@ public class Base {
 	public static String jiraUserName;
 	public static String testcaseName;
 	public static int rowExecuted;
+	public static String mountebankStubAPI;
+	public static String mountebankStubServer;
+	public static String mountebankStubServerDomain;
 
 	public static ThreadLocal<WebDriver> browser = new ThreadLocal<WebDriver>();
 
@@ -173,6 +175,9 @@ public class Base {
 		issueTypeId = config.properties.get("jiraIssueTypeId");
 		jiraBaseURL = config.properties.get("jiraBaseURL");
 		jiraUserName = config.properties.get("jiraUserName");
+		mountebankStubAPI = config.properties.get("mountebankStubAPI");
+		mountebankStubServer = config.properties.get("mountebankStubServer");
+		mountebankStubServerDomain = config.properties.get("mountebankStubServerDomain");
 
 		Log.info("Successfully Gathered Configuration Properties...");
 	}
@@ -305,7 +310,7 @@ public class Base {
 	@AfterMethod
 	public void after_Method() {
 		//Update Jira and zephyr with test results.
-		ZephyrJiraActivity();
+		//ZephyrJiraActivity();
 	}
 
 
