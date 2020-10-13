@@ -372,6 +372,12 @@
 			<artifactId>postgresql</artifactId>
 			<version>42.2.14</version>
 		</dependency>
+		<dependency>
+			<groupId>io.rest-assured</groupId>
+			<artifactId>rest-assured</artifactId>
+			<version>4.2.0</version>
+			<scope>compile</scope>
+		</dependency>
 	</dependencies>
 
 </project>

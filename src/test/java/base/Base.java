@@ -101,6 +101,7 @@ public class Base {
 	public static String mountebankStubAPI;
 	public static String mountebankStubServer;
 	public static String mountebankStubServerDomain;
+	public static String mountebankStubConfigPath;
 
 	public static ThreadLocal<WebDriver> browser = new ThreadLocal<WebDriver>();
 
@@ -178,6 +179,7 @@ public class Base {
 		mountebankStubAPI = config.properties.get("mountebankStubAPI");
 		mountebankStubServer = config.properties.get("mountebankStubServer");
 		mountebankStubServerDomain = config.properties.get("mountebankStubServerDomain");
+		mountebankStubConfigPath = config.properties.get("stubsConfigPath");
 
 		Log.info("Successfully Gathered Configuration Properties...");
 	}
@@ -310,7 +312,7 @@ public class Base {
 	@AfterMethod
 	public void after_Method() {
 		//Update Jira and zephyr with test results.
-		//ZephyrJiraActivity();
+		ZephyrJiraActivity();
 	}
 
 
