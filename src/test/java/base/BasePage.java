@@ -10,6 +10,8 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.StringTokenizer;
 
+import helpers.DatabaseManager.JDBCMultiDBManager;
+import helpers.DatabaseManager.MongoDBManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
@@ -41,7 +43,8 @@ public class BasePage {
 
 	protected WebDriver lDriver;
 	protected WebDriverWait myWait;
-	public static DatabaseManager DBManager;
+	public static MongoDBManager mongoDBManager;
+	public static JDBCMultiDBManager jdbcMultiDBManager;
 	JavascriptExecutor js;
 	public static boolean smartObjHandler = false;
 	public enum LocType{id,name,tagName , className,value,title,type};
@@ -55,7 +58,7 @@ public class BasePage {
 			lDriver = driver;
 			myWait = new WebDriverWait(driver, 10);
 			if(smartObjHandler) {
-				DBManager = new DatabaseManager();
+				mongoDBManager = new MongoDBManager();
 			}
 		} else {
 			throw new MyException("Browser Instance Is Null");
@@ -433,7 +436,7 @@ public class BasePage {
 		if (element.getAttribute("type") !=null && !(element.getAttribute("type").isEmpty()))
 			locatorAttr= locatorAttr + "type:"+element.getAttribute("type");
 
-		DatabaseManager.createOrUpdateDBRecord(locatorEntry.get(getLocator(LocatorEntry.url)),locatorEntry.get(getLocator(LocatorEntry.locatorValue)),locatorEntry.get(getLocator(LocatorEntry.locatorType)),locatorAttr);
+		MongoDBManager.createOrUpdateDBRecord(locatorEntry.get(getLocator(LocatorEntry.url)),locatorEntry.get(getLocator(LocatorEntry.locatorValue)),locatorEntry.get(getLocator(LocatorEntry.locatorType)),locatorAttr);
 
 	} 
 
@@ -442,7 +445,7 @@ public class BasePage {
 	private String getDBLocatorEntry(HashMap<String,String> locatorEntry)
 	{
 		//String locatorAttr = "id:text######type:text#";
-		return DatabaseManager.getDBRecord(locatorEntry.get(getLocator(LocatorEntry.url)),locatorEntry.get(getLocator(LocatorEntry.locatorValue)),locatorEntry.get(getLocator(LocatorEntry.locatorType)));
+		return MongoDBManager.getDBRecord(locatorEntry.get(getLocator(LocatorEntry.url)),locatorEntry.get(getLocator(LocatorEntry.locatorValue)),locatorEntry.get(getLocator(LocatorEntry.locatorType)));
 	}
 
 	private String createXpathFromLocatorAttr(String locatorType,String locatorValue)

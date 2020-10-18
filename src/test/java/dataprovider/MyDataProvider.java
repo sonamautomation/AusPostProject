@@ -49,4 +49,14 @@ public class MyDataProvider extends Base {
 		testDataArray = ExcelUtility.getTestData(method.getName());
 		return testDataArray;
 	}
+
+	@DataProvider(name = "JDBCDataProvider")
+	public static Object[][] dataProviderMethod5(Method method) throws Exception {
+		Object[][] testDataArray = null;
+		com.htcindia.trracs.helpers.ExcelUtility.setExcelFile(config.properties.get("testDataFilesPath") + config.properties.get("testDataFile"),"JDBC");
+		/* Test method name and value in test data should be same(value highlighted) */
+		testDataArray = com.htcindia.trracs.helpers.ExcelUtility.getTestData(method.getName());
+		return testDataArray;
+	}
 }
+
