@@ -10,8 +10,7 @@
         {
           "equals": {
             "path": "/test",
-            "method": "POST",
-            "headers": { "Content-Type": "application/json" }
+            "method": "POST"
           }
         },
         {

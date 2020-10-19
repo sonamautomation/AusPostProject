@@ -4,12 +4,19 @@ import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import io.restassured.RestAssured;
 
+import java.io.File;
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+
 public class MountebankStubApi {
 
    //Create an Imposter (Stub API)
-   public static Response createImposter(String ImposterConfig, String mountebankStubServerURL){
+   public static Response createImposter(String ImposterConfig, String mountebankStubServerURL) throws IOException {
+      File StubConfigFile = new File(ImposterConfig);
+      String content = new String(Files.readAllBytes(StubConfigFile.toPath()), StandardCharsets.UTF_8);
       return RestAssured.given().contentType(ContentType.JSON)
-              .body(ImposterConfig)
+              .body(content)
               .post(mountebankStubServerURL + "imposters");
    }
 

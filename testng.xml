@@ -2,8 +2,12 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite">
 	<parameter name="browser" value="Firefox"></parameter>
+<!--	<listeners>
+	<listener class-name="listener.MyListener"></listener>
+</listeners>-->
+
 	<listeners>
-		<listener class-name="listener.MyListener"></listener>
+		<listener class-name="listener.CustomListener"></listener>
 	</listeners>
 
 
@@ -28,6 +32,12 @@
 			<class name="testcases.MounteBankAPITest" />
 		</classes>
 	</test>
+
+<!--	<test name="APITest">
+			<classes>
+				<class name="testcases.APITest"></class>
+			</classes>
+	</test>-->
 
 
 

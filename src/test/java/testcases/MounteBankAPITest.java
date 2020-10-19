@@ -1,59 +1,51 @@
 package testcases;
 
-import base.Base;
-import helpers.MountebankStubApi;
-import io.restassured.RestAssured;
-import io.restassured.http.ContentType;
-import listener.MyListener;
-import org.json.JSONObject;
+import com.aventstack.extentreports.Status;
+import dataprovider.MyDataProvider;
+import listener.CustomListener;
+import messageObjects.MessageConstruct;
+import messageObjects.MessageFactory;
+import org.testng.Assert;
 import org.testng.annotations.Test;
-import java.io.File;
-import java.io.IOException;
-import java.net.URISyntaxException;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
 
-public class MounteBankAPITest extends MyListener {
+import java.lang.reflect.Method;
+import java.util.Map;
+
+public class MounteBankAPITest extends CustomListener {
 
     //Pre-requisite: Mountebank stub server is running and accessible
 
-    //Validate that the stub server is running
-    @Test(priority = 1)
-    public void shouldHaveStatusCodeOf200ForStubServerAPI() {
-        RestAssured.given().contentType(ContentType.JSON).get(Base.mountebankStubAPI).then().statusCode(200);
+     @Test(dataProvider = "APITestData",dataProviderClass = MyDataProvider.class,priority = 1)
+    public void testMountebankAPI(Map<String,String> testData, Method method) throws Exception
+    {
+        setTestCase(getParentTestCase().createNode(method.getName()).assignCategory("API"));
+        String templateType= testData.get("type");
+        String requestType= testData.get("requestType");
+        String templateIdValue= testData.get("TemplateId");
+
+
+        //Get the Template data
+        String jsonTemplate = MessageConstruct.getTemplateData("Type",templateType,"TemplateId",templateIdValue,"Template");
+        getTestCase().log(Status.INFO, "SUCCESSFULLY ABLE TO READ THE JSON TEMPLATE - </br>" + jsonTemplate);
+
+        //Construct the uri from the Template data sheet
+        String uriConstruct = MessageConstruct.getTemplateData("Type",templateType,"TemplateId",templateIdValue,"URIConstruct");
+
+        //Construct the JSON String
+        String jsonBody = MessageConstruct.constructJsonString(jsonTemplate,testData.get("jsonPath"),testData.get("productID"));
+        getTestCase().log(Status.INFO, "SUCCESSFULLY ABLE TO CONSTRUCT THE JSON BODY - </br>"+jsonBody);
+
+        //Post the JSON request
+        String postRequestStatus = MessageFactory.getResponse(uri,jsonBody, templateType, requestType, uriConstruct);
+
+        //Validate Response
+        Assert.assertEquals(postRequestStatus, testData.get("response"), "Request has not been Processed");
+        getTestCase().log(Status.INFO, "SUCCESSFULLY ABLE TO PROCESS POST REQUEST - "+postRequestStatus);
+
+        String getRequestStatus = MessageFactory.getResponse(uri,jsonBody, templateType, "POST", uriConstruct);
+        Assert.assertEquals(getRequestStatus, testData.get("response"), "Request has not been Processed");
+        getTestCase().log(Status.INFO, "SUCCESSFULLY ABLE TO PROCESS GET REQUEST - "+getRequestStatus);
+
     }
 
-    //Create an imposter on the stub server
-    @Test(priority = 2)
-    public void createSingleStubImposter() throws URISyntaxException {
-        String filename = "teststub.json";
-        File StubConfigFile = new File(Base.mountebankStubConfigPath + filename);
-
-        try {
-            String content = new String(Files.readAllBytes(StubConfigFile.toPath()), StandardCharsets.UTF_8);
-            MountebankStubApi.createImposter(content, Base.mountebankStubServer).then()
-                    .statusCode(201);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    //Validate the behaviour of the stub. It should return a 400 response given the request follows the predicates in the stub settings.
-    @Test(priority = 3)
-    public void validateImposter() {
-        JSONObject requestParameters = new JSONObject();
-        requestParameters.put("optionalField", "true");
-        RestAssured
-                .given()
-                .contentType("application/json\r\n")
-                .body(requestParameters.toString())
-                .post(Base.mountebankStubServerDomain + ":5050/test")
-                .then().statusCode(400);
-    }
-
-    //Delete the imposter
-    @Test(priority = 4)
-    public void deleteSingleStubImposter() {
-        MountebankStubApi.deleteImposter("5050", Base.mountebankStubServer).then().statusCode(200);
-    }
 }
