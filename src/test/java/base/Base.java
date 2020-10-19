@@ -21,6 +21,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import pages.DashboardPage;
 import pages.LoginPage;
@@ -104,6 +105,7 @@ public class Base {
 	public static String stubConfigPath;
 	public static Boolean useMountebankStub;
 	public static String mountebankStubAPIJSONFilename;
+	public static String updateResults;
 
 	public static ThreadLocal<WebDriver> browser = new ThreadLocal<WebDriver>();
 
@@ -184,7 +186,8 @@ public class Base {
 		stubConfigPath = config.properties.get("stubsConfigPath");
 		useMountebankStub = Boolean.valueOf(config.properties.get("useMountebankStub"));
 		mountebankStubAPIJSONFilename = config.properties.get("mountebankStubAPIJSONFilename");
-
+		updateResults = config.properties.get("updateResults");
+		
 		Log.info("Successfully Gathered Configuration Properties...");
 	}
 
@@ -314,9 +317,9 @@ public class Base {
 	}
 
 	@AfterMethod
-	public void after_Method() {
+	public void after_Method() {	
 		//Update Jira and zephyr with test results.
-		ZephyrJiraActivity();
+		if(updateResults.equalsIgnoreCase("TRUE")) {ZephyrJiraActivity();}
 	}
 
 
