@@ -99,6 +99,7 @@ public class Base {
 	public static String jiraUserName;
 	public static String testcaseName;
 	public static int rowExecuted;
+	public static String updateResults;
 
 	public static ThreadLocal<WebDriver> browser = new ThreadLocal<WebDriver>();
 
@@ -173,7 +174,7 @@ public class Base {
 		issueTypeId = config.properties.get("jiraIssueTypeId");
 		jiraBaseURL = config.properties.get("jiraBaseURL");
 		jiraUserName = config.properties.get("jiraUserName");
-
+		updateResults = config.properties.get("updateResults");
 		Log.info("Successfully Gathered Configuration Properties...");
 	}
 
@@ -303,9 +304,9 @@ public class Base {
 	}
 
 	@AfterMethod
-	public void after_Method() {
+	public void after_Method() {	
 		//Update Jira and zephyr with test results.
-		ZephyrJiraActivity();
+		if(updateResults.equalsIgnoreCase("TRUE")) {ZephyrJiraActivity();}
 	}
 
 
