@@ -99,6 +99,12 @@ public class Base {
 	public static String jiraUserName;
 	public static String testcaseName;
 	public static int rowExecuted;
+	public static String mountebankStubAPIPort;
+	public static String mountebankStubServer;
+	public static String mountebankStubServerDomain;
+	public static String stubConfigPath;
+	public static Boolean useMountebankStub;
+	public static String mountebankStubAPIJSONFilename;
 	public static String updateResults;
 
 	public static ThreadLocal<WebDriver> browser = new ThreadLocal<WebDriver>();
@@ -174,7 +180,14 @@ public class Base {
 		issueTypeId = config.properties.get("jiraIssueTypeId");
 		jiraBaseURL = config.properties.get("jiraBaseURL");
 		jiraUserName = config.properties.get("jiraUserName");
+		mountebankStubAPIPort = config.properties.get("mountebankStubAPIPort");
+		mountebankStubServer = config.properties.get("mountebankStubServer");
+		mountebankStubServerDomain = config.properties.get("mountebankStubServerDomain");
+		stubConfigPath = config.properties.get("stubsConfigPath");
+		useMountebankStub = Boolean.valueOf(config.properties.get("useMountebankStub"));
+		mountebankStubAPIJSONFilename = config.properties.get("mountebankStubAPIJSONFilename");
 		updateResults = config.properties.get("updateResults");
+		
 		Log.info("Successfully Gathered Configuration Properties...");
 	}
 

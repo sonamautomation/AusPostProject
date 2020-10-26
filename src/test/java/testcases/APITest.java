@@ -4,6 +4,7 @@ package testcases;
 import java.lang.reflect.Method;
 import java.util.Map;
 
+import listener.MyListener;
 import messageObjects.NewAnnotation;
 import org.testng.Assert;
 import org.testng.annotations.Listeners;
@@ -18,7 +19,7 @@ import org.w3c.dom.Document;
 import static io.restassured.RestAssured.given;
 
 
-public class APITest extends Base {
+public class APITest extends MyListener {
 
 	@Test(dataProvider = "APITestData", dataProviderClass = MyDataProvider.class)
 	public void testAPIWithJsonRequest(Map<String,String> testData,Method method) throws Exception

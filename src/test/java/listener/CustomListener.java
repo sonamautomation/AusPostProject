@@ -2,27 +2,15 @@ package listener;
 
 import java.io.File;
 import java.io.IOException;
-import java.lang.reflect.Method;
-import java.net.MalformedURLException;
-import java.nio.file.Path;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.remote.BrowserType;
+import helpers.MountebankStubApi;
 import org.testng.ISuite;
 import org.testng.ISuiteListener;
-import org.testng.ITestClass;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
-import org.testng.ITestNGMethod;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
-import org.testng.xml.XmlClass;
-import org.testng.xml.XmlTest;
 
-import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.markuputils.ExtentColor;
@@ -30,7 +18,6 @@ import com.aventstack.extentreports.markuputils.MarkupHelper;
 
 import base.Base;
 import helpers.MyException;
-import pages.LoginPage;
 
 public class CustomListener extends Base implements ITestListener, ISuiteListener {
 
@@ -51,6 +38,21 @@ public class CustomListener extends Base implements ITestListener, ISuiteListene
 			Log.error("Failed To Gather Config Properties" + "\n" + e.getMessage());
 			e.printStackTrace();
 		}
+
+		//Create stub if flags set to true
+		if(runApi && useMountebankStub){
+			try{
+
+				MountebankStubApi.createImposter(stubConfigPath+ mountebankStubAPIJSONFilename,mountebankStubServer);
+				Log.info("Created Imposter/Stub using stub definition file:" + stubConfigPath+mountebankStubAPIJSONFilename);
+			} catch (IOException e1){
+				Log.error("Failed to create Mountebank stub api endpoint" + e1.getMessage());
+			}
+
+			Log.info("Switching URI pointing to real API at [" + uri + "] to point to stub at [" + mountebankStubServerDomain + ":" + mountebankStubAPIPort + "/" + "]" );
+			uri = mountebankStubServerDomain + ":" + mountebankStubAPIPort + "/";
+
+		}
 	}
 
 	@Override
@@ -59,7 +61,13 @@ public class CustomListener extends Base implements ITestListener, ISuiteListene
 			stopGrid(typeOfBrowser);
 		} catch (IOException e) {
 			e.printStackTrace();
-		} 
+		}
+
+		// Delete mountebank api stub
+		if(useMountebankStub){
+			MountebankStubApi.deleteImposter(mountebankStubAPIPort,mountebankStubServer);
+			Log.info("Delete Imposter/Stub at port: " + mountebankStubAPIPort);
+		}
 		 
 	}
 
