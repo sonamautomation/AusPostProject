@@ -44,11 +44,14 @@ public class CustomListener extends Base implements ITestListener, ISuiteListene
 			try{
 
 				MountebankStubApi.createImposter(stubConfigPath+ mountebankStubAPIJSONFilename,mountebankStubServer);
+				Log.info("Created Imposter/Stub using stub definition file:" + stubConfigPath+mountebankStubAPIJSONFilename);
 			} catch (IOException e1){
-				Log.error("Failed to create Mountebank stub api endpoint" +"`\n" + e1.getMessage());
+				Log.error("Failed to create Mountebank stub api endpoint" + e1.getMessage());
 			}
 
+			Log.info("Switching URI pointing to real API at [" + uri + "] to point to stub at [" + mountebankStubServerDomain + ":" + mountebankStubAPIPort + "/" + "]" );
 			uri = mountebankStubServerDomain + ":" + mountebankStubAPIPort + "/";
+
 		}
 	}
 
@@ -63,6 +66,7 @@ public class CustomListener extends Base implements ITestListener, ISuiteListene
 		// Delete mountebank api stub
 		if(useMountebankStub){
 			MountebankStubApi.deleteImposter(mountebankStubAPIPort,mountebankStubServer);
+			Log.info("Delete Imposter/Stub at port: " + mountebankStubAPIPort);
 		}
 		 
 	}
