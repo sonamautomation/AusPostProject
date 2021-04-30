@@ -149,5 +149,16 @@ public class LoginPage extends BasePage implements LoginPageObjects {
 		System.out.println("Navigated succesfully to nbn WebPage and validated the page");
 	}
 
+	public void GoogleTest() throws MyException
+	{
+		type("ampion" + Keys.ENTER,searchInput);
+		check(searchAmpion,"IsDisplayed");
+		clickOn(searchAmpion);
+		check(titleAmpion,"IsDisplayed");
+		if (!lDriver.getTitle().contains("Ampion")){
+			Assert.fail("Ampion page not loaded");
+		}
+	}
+
 
 }

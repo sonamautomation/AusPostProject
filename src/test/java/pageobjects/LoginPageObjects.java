@@ -41,6 +41,9 @@ public interface LoginPageObjects {
 	By nbnCareers=By.linkText("Careers");
 	By jobs=By.xpath("(//*[contains(text(),'Browse current job openings')])[last()]");
 	By searchForJobs=By.xpath("//*[contains(text(),'Search for Jobs')]");
+	By searchInput=By.xpath("//input[@name='q']");
+	By searchAmpion=By.xpath("//a[@href='https://www.ampion.com.au/']");
+	By titleAmpion=By.xpath("(//*[@alt='ampion logo'])[2]");
 
 
 

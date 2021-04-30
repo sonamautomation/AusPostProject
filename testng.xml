@@ -27,17 +27,23 @@
 			<class name="com.htcindia.trracs.testcases.BOEClosureTest" />
 		</classes-->
 
-	<test name="MounteBankAPITest">
-		<classes>
-			<class name="testcases.MounteBankAPITest" />
-		</classes>
-	</test>
+<!--	<test name="MounteBankAPITest">-->
+<!--		<classes>-->
+<!--			<class name="testcases.MounteBankAPITest" />-->
+<!--		</classes>-->
+<!--	</test>-->
 
-<!--	<test name="APITest">
+	<test name="APITest">
 			<classes>
 				<class name="testcases.APITest"></class>
 			</classes>
-	</test>-->
+	</test>
+
+<!--	<test name="SampleTest_001">-->
+<!--		<classes>-->
+<!--			<class name="testcases.SampleTest_001"></class>-->
+<!--		</classes>-->
+<!--	</test>-->
 
 
 

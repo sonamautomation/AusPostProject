@@ -19,9 +19,8 @@ import org.w3c.dom.Document;
 import static io.restassured.RestAssured.given;
 
 
-public class APITest extends MyListener {
-
-	@Test(dataProvider = "APITestData", dataProviderClass = MyDataProvider.class)
+public class APITest extends Base {
+	@Test(enabled = false, dataProvider = "APITestData", dataProviderClass = MyDataProvider.class)
 	public void testAPIWithJsonRequest(Map<String,String> testData,Method method) throws Exception
 	{
 		setTestCase(getParentTestCase().createNode(method.getName()).assignCategory("API"));
